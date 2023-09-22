@@ -1,18 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class StoneMover : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private bool isHolding;
+
+    public void OnMouseHold(InputAction.CallbackContext context)
     {
-        
+        if (context.started)
+        {
+            isHolding = true;
+        }
+        else if (context.canceled)
+        {
+            isHolding = false;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (isHolding)
+        {
+            Debug.Log("holding");
+        }
+        else
+        {
+            Debug.Log("not holding");
+        }
     }
 }

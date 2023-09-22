@@ -6,24 +6,24 @@
             "id": "5c7e0072-e503-4caf-9366-cf26ed09d879",
             "actions": [
                 {
-                    "name": "New action",
-                    "type": "Value",
-                    "id": "ec634d40-a8a8-4b1d-b0d4-9f5469c99202",
-                    "expectedControlType": "Axis",
+                    "name": "Holding mouse1",
+                    "type": "Button",
+                    "id": "25483156-9424-4b71-b809-c078206fad12",
+                    "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
+                    "interactions": "Hold",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "fbf3b2bb-d3af-42fc-babd-9f1479e133f4",
-                    "path": "",
+                    "id": "060295d8-9f2d-4ec1-8d62-0cc8aba86df1",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Holding mouse1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

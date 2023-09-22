@@ -1,0 +1,34 @@
+{
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "gameplay",
+            "id": "5c7e0072-e503-4caf-9366-cf26ed09d879",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Value",
+                    "id": "ec634d40-a8a8-4b1d-b0d4-9f5469c99202",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "fbf3b2bb-d3af-42fc-babd-9f1479e133f4",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

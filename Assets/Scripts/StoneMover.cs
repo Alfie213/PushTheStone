@@ -3,23 +3,23 @@ using UnityEngine.InputSystem;
 
 public class StoneMover : MonoBehaviour
 {
-    private bool isHolding;
+    private bool isHoldingMouse;
 
     public void OnMouseHold(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            isHolding = true;
+            isHoldingMouse = true;
         }
         else if (context.canceled)
         {
-            isHolding = false;
+            isHoldingMouse = false;
         }
     }
 
     private void Update()
     {
-        if (isHolding)
+        if (isHoldingMouse)
         {
             Debug.Log("holding");
         }

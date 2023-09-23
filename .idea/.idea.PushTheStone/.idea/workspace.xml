@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d743fd4d-d12b-4ae7-95d1-d723d14e6dd3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/Controls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/Controls.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StoneMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StoneMover.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +76,8 @@
       <updated>1694758017325</updated>
       <workItem from="1694758025681" duration="317000" />
       <workItem from="1695363005171" duration="1879000" />
-      <workItem from="1695369057055" duration="3602000" />
+      <workItem from="1695369057055" duration="4094000" />
+      <workItem from="1695450236019" duration="1062000" />
     </task>
     <servers />
   </component>

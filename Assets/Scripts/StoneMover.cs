@@ -8,16 +8,22 @@ public class StoneMover : MonoBehaviour
     private bool isHoldingMouse;
     private bool isMouseInScreen;
 
-    public void OnMouseHold(InputAction.CallbackContext context)
+    public void OnMoveByMouse(InputAction.CallbackContext context)
     {
-        if (context.started)
-        {
-            isHoldingMouse = true;
-        }
-        else if (context.canceled)
-        {
-            isHoldingMouse = false;
-        }
+        Debug.Log(context.ReadValue<float>());
+        // if (context.started)
+        // {
+        //     isHoldingMouse = true;
+        // }
+        // else if (context.canceled)
+        // {
+        //     isHoldingMouse = false;
+        // }
+    }
+
+    public void OnMoveByKeyboard(InputAction.CallbackContext context)
+    {
+        Debug.Log(context.ReadValue<float>());
     }
 
     private void Awake()
@@ -51,13 +57,13 @@ public class StoneMover : MonoBehaviour
 
     private void Handle_OnMouseEnterScreen()
     {
-        Debug.Log("true");
+        // Debug.Log("true");
         isMouseInScreen = true;
     }
 
     private void Handle_OnMouseExitScreen()
     {
-        Debug.Log("false");
+        // Debug.Log("false");
         isMouseInScreen = false;
     }
 }

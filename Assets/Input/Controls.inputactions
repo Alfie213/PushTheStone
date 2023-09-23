@@ -6,24 +6,99 @@
             "id": "5c7e0072-e503-4caf-9366-cf26ed09d879",
             "actions": [
                 {
-                    "name": "Holding mouse1",
-                    "type": "Button",
+                    "name": "Move by keyboard",
+                    "type": "Value",
                     "id": "25483156-9424-4b71-b809-c078206fad12",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "Hold",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Move by mouse",
+                    "type": "Button",
+                    "id": "b73e4f9a-e54f-4560-a544-d8c9779284dc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
                     "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "060295d8-9f2d-4ec1-8d62-0cc8aba86df1",
-                    "path": "<Mouse>/leftButton",
+                    "name": "AD",
+                    "id": "d4b99a87-2f45-490e-b52c-eb57cf51bde7",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Mouse&Keyboard",
-                    "action": "Holding mouse1",
+                    "groups": "",
+                    "action": "Move by keyboard",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "f8b175dd-4d61-4e25-a14c-12ebcda1a53b",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Move by keyboard",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "4b4cd13c-77e3-4487-bede-802da8a77323",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Move by keyboard",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Arrows",
+                    "id": "61f488c6-d999-43df-b3ec-0e792b43faaf",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move by keyboard",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "111d2b62-817e-4b7b-b024-0a646f145688",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Move by keyboard",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "5c5a3c1e-ac65-41c7-848a-f32d3870651a",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Move by keyboard",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "9fc23025-47f3-4ee7-a1d1-124787b202c8",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "Mouse",
+                    "action": "Move by mouse",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -32,16 +107,22 @@
     ],
     "controlSchemes": [
         {
-            "name": "Mouse&Keyboard",
-            "bindingGroup": "Mouse&Keyboard",
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Mouse",
+            "bindingGroup": "Mouse",
             "devices": [
                 {
                     "devicePath": "<Mouse>",
-                    "isOptional": false,
-                    "isOR": false
-                },
-                {
-                    "devicePath": "<Keyboard>",
                     "isOptional": false,
                     "isOR": false
                 }

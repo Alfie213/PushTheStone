@@ -406,7 +406,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1544520552}
         m_TargetAssemblyTypeName: StoneMover, Assembly-CSharp
-        m_MethodName: OnMouseHold
+        m_MethodName: OnMoveByKeyboard
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -418,6 +418,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 25483156-9424-4b71-b809-c078206fad12
     m_ActionName: gameplay/Holding mouse1[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1544520552}
+        m_TargetAssemblyTypeName: StoneMover, Assembly-CSharp
+        m_MethodName: OnMoveByMouse
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b73e4f9a-e54f-4560-a544-d8c9779284dc
+    m_ActionName: gameplay/Move by mouse[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: gameplay

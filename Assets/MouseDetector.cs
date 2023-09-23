@@ -1,15 +1,14 @@
-using System;
 using UnityEngine;
 
 public class MouseDetector : MonoBehaviour
 {
     private void OnMouseEnter()
     {
-        Debug.Log("mouse enter");
+        EnvironmentEventBus.OnMouseEnterScreen.Publish();
     }
 
     private void OnMouseExit()
     {
-        Debug.Log("mouse exit");
+        EnvironmentEventBus.OnMouseExitScreen.Publish();
     }
 }

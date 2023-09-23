@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class StoneMover : MonoBehaviour
 {
+    private Camera cam;
     private bool isHoldingMouse;
 
     public void OnMouseHold(InputAction.CallbackContext context)
@@ -17,15 +18,20 @@ public class StoneMover : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        cam = Camera.main;
+    }
+
     private void Update()
     {
-        if (isHoldingMouse)
-        {
-            Debug.Log("holding");
-        }
-        else
-        {
-            Debug.Log("not holding");
-        }
+        if (!isHoldingMouse) return;
+
+        Vector3 mousePos = Input.mousePosition;
+        // mousePos.z = Camera.main.nearClipPlane; Fix z-coordinate.
+        var position = transform.position;
+        position = new Vector3(cam.ScreenToWorldPoint(mousePos).x, position.y,
+            position.z);
+        transform.position = position;
     }
 }

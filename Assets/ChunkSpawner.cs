@@ -17,6 +17,16 @@ public class ChunkSpawner : MonoBehaviour
         instantiatePosition = new Vector3(0f, cam.orthographicSize * 2, 0f);
     }
 
+    private void OnEnable()
+    {
+        EnvironmentEventBus.OnChunkDestroy.Subscribe(InstantiateRandomChunk);
+    }
+
+    private void OnDisable()
+    {
+        EnvironmentEventBus.OnChunkDestroy.Unsubscribe(InstantiateRandomChunk);
+    }
+
     private void Start()
     {
         for (int i = 0; i < spawnedChunkCount; i++)

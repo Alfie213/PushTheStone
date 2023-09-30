@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d743fd4d-d12b-4ae7-95d1-d723d14e6dd3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/Chunk/Chunk1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/Chunk/Chunk1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/Chunk/Chunk2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/Chunk/Chunk2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/Chunk/EmptyChunkTemplate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/Chunk/EmptyChunkTemplate.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Chunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Chunk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChunkSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChunkSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/EventBus/EventBuses/EnvironmentEventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/EventBus/EventBuses/EnvironmentEventBus.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +16,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/86acb61e0d2b4b36bc20af11093be9a5157e00/aa/6b048327/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ChunkSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Samples/Input System/1.4.4/Simple Demo/SimpleController_UsingState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/src/GameSystems/EventBus/EventBuses/EnvironmentEventBus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Controls/InputControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInputModule.cs" root0="SKIP_HIGHLIGHTING" />
@@ -88,6 +87,7 @@
       <workItem from="1695450236019" duration="5423000" />
       <workItem from="1696071220676" duration="6557000" />
       <workItem from="1696101396616" duration="6000" />
+      <workItem from="1696104042968" duration="546000" />
     </task>
     <servers />
   </component>

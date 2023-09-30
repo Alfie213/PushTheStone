@@ -13,6 +13,7 @@ public class Chunk : MonoBehaviour
     {
         if (transform.position.y <= -cam.orthographicSize * 2)
         {
+            EnvironmentEventBus.OnChunkDestroy.Publish();
             Destroy(this);
         }
     }

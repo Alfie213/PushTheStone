@@ -19,12 +19,12 @@ public class ChunkSpawner : MonoBehaviour
 
     private void OnEnable()
     {
-        EnvironmentEventBus.OnChunkDestroy.Subscribe(InstantiateRandomChunk);
+        EnvironmentEventBus.OnChunkDestroy.Subscribe(Handle_OnChunkDestroy);
     }
 
     private void OnDisable()
     {
-        EnvironmentEventBus.OnChunkDestroy.Unsubscribe(InstantiateRandomChunk);
+        EnvironmentEventBus.OnChunkDestroy.Unsubscribe(Handle_OnChunkDestroy);
     }
 
     private void Start()
@@ -33,6 +33,12 @@ public class ChunkSpawner : MonoBehaviour
             InstantiateRandomChunk();
     }
 
+    private void Handle_OnChunkDestroy()
+    {
+        // DecreaseInstantiatePosition();
+        InstantiateRandomChunk();
+    }
+    
     private void InstantiateRandomChunk()
     {
         Instantiate(chunks[Random.Range(0, chunks.Length)], instantiatePosition, Quaternion.identity, chunkSpawnParent);

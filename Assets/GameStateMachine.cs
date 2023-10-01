@@ -12,6 +12,26 @@ public class GameStateMachine : MonoBehaviour
         GameOver
     }
 
+    private void Awake()
+    {
+        currentState = State.Pause;
+    }
+
+    private void OnEnable()
+    {
+        EnvironmentEventBus.OnStoneCollidedObstacle.Subscribe(Handle_OnStoneCollidedObstacle);
+    }
+
+    private void OnDisable()
+    {
+        EnvironmentEventBus.OnStoneCollidedObstacle.Unsubscribe(Handle_OnStoneCollidedObstacle);
+    }
+
+    private void Handle_OnStoneCollidedObstacle()
+    {
+        ChangeState(State.GameOver);
+    }
+    
     private void ChangeState(State state)
     {
         currentState = state;

@@ -6,6 +6,6 @@ public class Obstacle : MonoBehaviour
     {
         if (!col.gameObject.TryGetComponent(out StoneMover _)) return;
         
-        Debug.Log("GameOver");
+        EnvironmentEventBus.OnStoneCollidedObstacle.Publish();
     }
 }

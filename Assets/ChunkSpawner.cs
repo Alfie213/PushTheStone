@@ -10,11 +10,13 @@ public class ChunkSpawner : MonoBehaviour
 
     private Camera cam;
     private Transform lastInstantiatedChunk;
+    private int lastInstantiatedChunkIndex;
 
     private void Awake()
     {
         cam = Camera.main;
         lastInstantiatedChunk = GetComponent<Transform>();
+        lastInstantiatedChunkIndex = -1;
     }
 
     private void OnEnable()
@@ -30,14 +32,27 @@ public class ChunkSpawner : MonoBehaviour
     private void Start()
     {
         for (int i = 0; i < spawnedChunkCount; i++)
-            InstantiateRandomChunk();
+            InstantiateRandomChunkNoRepetitions();
     }
 
     private void Handle_OnChunkDestroy()
     {
-        InstantiateRandomChunk();
+        InstantiateRandomChunkNoRepetitions();
     }
     
+    private void InstantiateRandomChunkNoRepetitions()
+    {
+        int newChunkIndex = Random.Range(0, chunks.Length);
+        while (chunks.Length > 1 && newChunkIndex == lastInstantiatedChunkIndex)
+        {
+            newChunkIndex = Random.Range(0, chunks.Length);
+        }
+        lastInstantiatedChunk = Instantiate(chunks[newChunkIndex],
+            lastInstantiatedChunk.position + new Vector3(0f, cam.orthographicSize * 2, 0f), Quaternion.identity,
+            chunkSpawnParent).GetComponent<Transform>();
+        lastInstantiatedChunkIndex = newChunkIndex;
+    }
+
     private void InstantiateRandomChunk()
     {
         lastInstantiatedChunk = Instantiate(chunks[Random.Range(0, chunks.Length)],

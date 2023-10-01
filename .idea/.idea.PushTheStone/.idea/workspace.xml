@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d743fd4d-d12b-4ae7-95d1-d723d14e6dd3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ChunkSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChunkSpawner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +87,7 @@
       <workItem from="1696071220676" duration="6557000" />
       <workItem from="1696101396616" duration="6000" />
       <workItem from="1696104042968" duration="3291000" />
-      <workItem from="1696140894748" duration="292000" />
+      <workItem from="1696140894748" duration="801000" />
     </task>
     <servers />
   </component>

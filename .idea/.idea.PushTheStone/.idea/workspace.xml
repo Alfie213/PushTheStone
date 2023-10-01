@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d743fd4d-d12b-4ae7-95d1-d723d14e6dd3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/EventBus/EventBuses/EnvironmentEventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/EventBus/EventBuses/EnvironmentEventBus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/Obstacle/Obstacle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/Obstacle/Obstacle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +92,7 @@
       <workItem from="1696071220676" duration="6557000" />
       <workItem from="1696101396616" duration="6000" />
       <workItem from="1696104042968" duration="3291000" />
-      <workItem from="1696140894748" duration="5130000" />
+      <workItem from="1696140894748" duration="5544000" />
     </task>
     <servers />
   </component>

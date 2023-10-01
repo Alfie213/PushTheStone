@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        if (!collision.gameObject.TryGetComponent(out StoneMover _)) return;
+        if (!col.gameObject.TryGetComponent(out StoneMover _)) return;
         
         Debug.Log("GameOver");
     }

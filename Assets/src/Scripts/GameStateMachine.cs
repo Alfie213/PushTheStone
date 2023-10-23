@@ -40,12 +40,15 @@ public class GameStateMachine : MonoBehaviour
         {
             case State.Pause:
                 Debug.Log("Pause");
+                EnvironmentEventBus.OnPause.Publish();
                 break;
             case State.Running:
                 Debug.Log("Running");
+                EnvironmentEventBus.OnRunning.Publish();
                 break;
             case State.GameOver:
                 Debug.Log("GameOver");
+                EnvironmentEventBus.OnGameOver.Publish();
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

@@ -6,15 +6,15 @@ public class PauseUIDeactivator : MonoBehaviour
 
     private void OnEnable()
     {
-        EnvironmentEventBus.OnMouseDownScreen.Subscribe(Handle_OnMouseDownScreen);
+        EnvironmentEventBus.OnPauseUIClick.Subscribe(Handle_OnPauseUIClick);
     }
 
     private void OnDisable()
     {
-        EnvironmentEventBus.OnMouseDownScreen.Unsubscribe(Handle_OnMouseDownScreen);
+        EnvironmentEventBus.OnPauseUIClick.Unsubscribe(Handle_OnPauseUIClick);
     }
 
-    private void Handle_OnMouseDownScreen()
+    private void Handle_OnPauseUIClick()
     {
         pauseUI.SetActive(false);
     }

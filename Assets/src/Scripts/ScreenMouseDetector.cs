@@ -8,10 +8,10 @@ public class ScreenMouseDetector : MonoBehaviour
         EnvironmentEventBus.OnMouseEnterScreen.Publish();
     }
 
-    private void OnMouseDown()
-    {
-        EnvironmentEventBus.OnMouseDownScreen.Publish();
-    }
+    // private void OnMouseDown()
+    // {
+    //     EnvironmentEventBus.OnMouseDownScreen.Publish();
+    // }
     
     private void OnMouseExit()
     {

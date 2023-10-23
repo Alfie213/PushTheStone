@@ -19,17 +19,17 @@ public class GameStateMachine : MonoBehaviour
 
     private void OnEnable()
     {
-        EnvironmentEventBus.OnMouseDownScreen.Subscribe(Handle_OnMouseDownScreen);
+        EnvironmentEventBus.OnPauseUIClick.Subscribe(Handle_OnPauseUIClick);
         EnvironmentEventBus.OnStoneCollidedObstacle.Subscribe(Handle_OnStoneCollidedObstacle);
     }
 
     private void OnDisable()
     {
-        EnvironmentEventBus.OnMouseDownScreen.Unsubscribe(Handle_OnMouseDownScreen);
+        EnvironmentEventBus.OnPauseUIClick.Unsubscribe(Handle_OnPauseUIClick);
         EnvironmentEventBus.OnStoneCollidedObstacle.Unsubscribe(Handle_OnStoneCollidedObstacle);
     }
 
-    private void Handle_OnMouseDownScreen()
+    private void Handle_OnPauseUIClick()
     {
         ChangeState(State.Running);
     }

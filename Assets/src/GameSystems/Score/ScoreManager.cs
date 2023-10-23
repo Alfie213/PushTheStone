@@ -39,22 +39,35 @@ public class ScoreManager : MonoBehaviour
 
     private void OnEnable()
     {
+        EnvironmentEventBus.OnPause.Subscribe(Handle_OnPause);
+        EnvironmentEventBus.OnRunning.Subscribe(Handle_OnRunning);
         EnvironmentEventBus.OnGameOver.Subscribe(Handle_OnGameOver);
     }
 
     private void OnDisable()
     {
+        EnvironmentEventBus.OnPause.Unsubscribe(Handle_OnPause);
+        EnvironmentEventBus.OnRunning.Unsubscribe(Handle_OnRunning);
         EnvironmentEventBus.OnGameOver.Unsubscribe(Handle_OnGameOver);
     }
 
     private void Update()
     {
-        if (currentState == State.Counting)
-        {
-            currentScore += scoreMultiplier * Time.deltaTime;
-        }
+        if (currentState is State.NotCounting) return;
+        
+        currentScore += scoreMultiplier * Time.deltaTime;
     }
 
+    private void Handle_OnPause()
+    {
+        ChangeState(State.NotCounting);
+    }
+
+    private void Handle_OnRunning()
+    {
+        ChangeState(State.Counting);
+    }
+    
     private void Handle_OnGameOver()
     {
         ChangeState(State.NotCounting);

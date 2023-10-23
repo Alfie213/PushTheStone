@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d743fd4d-d12b-4ae7-95d1-d723d14e6dd3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/EventBus/EventBuses/EnvironmentEventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/EventBus/EventBuses/EnvironmentEventBus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scripts/MouseDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scripts/ScreenTapDetector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scripts/MouseDetector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scripts/ScreenTapDetector.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/Chunk/Scripts/Chunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/Chunk/Scripts/Chunk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/Chunk/Scripts/ChunkSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/Chunk/Scripts/ChunkSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/Score/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/Score/ScoreManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +19,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/86acb61e0d2b4b36bc20af11093be9a5157e00/aa/6b048327/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f05995e23db3451db29e47ea3bac14c689e00/9e/9026530d/IDataBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameOverUIActivator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PauseUIDeactivator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Samples/Input System/1.4.4/Simple Demo/SimpleController_UsingState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/src/GameSystems/EventBus/EventBuses/EnvironmentEventBus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/src/Scripts/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
@@ -45,16 +48,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MemberGeneratorId&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "CodeLensConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Unity.exe" />
@@ -109,7 +112,7 @@
       <workItem from="1696581769025" duration="233000" />
       <workItem from="1698012055979" duration="406000" />
       <workItem from="1698070056874" duration="607000" />
-      <workItem from="1698095829025" duration="3603000" />
+      <workItem from="1698095829025" duration="5608000" />
     </task>
     <servers />
   </component>

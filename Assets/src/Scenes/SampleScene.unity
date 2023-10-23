@@ -2658,10 +2658,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d51574ba654946246b7a0292a0b33bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunks:
+  chunksPrefabs:
   - {fileID: 1870563923490595530, guid: a6f49fc7890ba8943ba2a960e4a3127c, type: 3}
   - {fileID: 9140178568203413991, guid: 4b3f40dfd99d88343b8f9cbfd62e3364, type: 3}
-  spawnedChunkCount: 4
+  maxSimultaneousChunks: 4
   chunkSpawnParent: {fileID: 1996847987}
 --- !u!1 &1766563723
 GameObject:

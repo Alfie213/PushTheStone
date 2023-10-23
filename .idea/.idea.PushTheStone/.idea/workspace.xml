@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d743fd4d-d12b-4ae7-95d1-d723d14e6dd3" name="Changes" comment="" />
+    <list default="true" id="d743fd4d-d12b-4ae7-95d1-d723d14e6dd3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/EventBus/EventBuses/EnvironmentEventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/EventBus/EventBuses/EnvironmentEventBus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/Scripts/MouseDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scripts/ScreenTapDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/Scripts/MouseDetector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scripts/ScreenTapDetector.cs.meta" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +109,7 @@
       <workItem from="1696581769025" duration="233000" />
       <workItem from="1698012055979" duration="406000" />
       <workItem from="1698070056874" duration="607000" />
-      <workItem from="1698095829025" duration="3276000" />
+      <workItem from="1698095829025" duration="3603000" />
     </task>
     <servers />
   </component>

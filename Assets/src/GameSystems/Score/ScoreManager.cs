@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public int Score => Convert.ToInt32(score);
+    public int CurrentScore => Convert.ToInt32(currentScore);
     
     [SerializeField] private float scoreMultiplier;
 
-    private float score;
-    private State state;
+    private float currentScore;
+    private State currentState;
 
     private enum State
     {
@@ -16,17 +16,47 @@ public class ScoreManager : MonoBehaviour
         NotCounting
     }
 
+    private void ChangeState(State state)
+    {
+        currentState = state;
+
+        switch (currentState)
+        {
+            case State.Counting:
+                break;
+            case State.NotCounting:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+    }
+
     private void Awake()
     {
-        score = 0f;
-        state = State.Counting;
+        currentScore = 0f;
+        currentState = State.NotCounting;
+    }
+
+    private void OnEnable()
+    {
+        EnvironmentEventBus.OnGameOver.Subscribe(Handle_OnGameOver);
+    }
+
+    private void OnDisable()
+    {
+        EnvironmentEventBus.OnGameOver.Unsubscribe(Handle_OnGameOver);
     }
 
     private void Update()
     {
-        if (state == State.Counting)
+        if (currentState == State.Counting)
         {
-            score += scoreMultiplier * Time.deltaTime;
+            currentScore += scoreMultiplier * Time.deltaTime;
         }
+    }
+
+    private void Handle_OnGameOver()
+    {
+        ChangeState(State.NotCounting);
     }
 }

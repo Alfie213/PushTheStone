@@ -36,19 +36,19 @@ public class Chunk : MonoBehaviour
         currentState = State.NotMoving;
     }
 
-    private void OnEnable()
-    {
-        EnvironmentEventBus.OnPause.Subscribe(Handle_OnPause);
-        EnvironmentEventBus.OnRunning.Subscribe(Handle_OnRunning);
-        EnvironmentEventBus.OnGameOver.Subscribe(Handle_OnGameOver);
-    }
-
-    private void OnDisable()
-    {
-        EnvironmentEventBus.OnPause.Unsubscribe(Handle_OnPause);
-        EnvironmentEventBus.OnRunning.Unsubscribe(Handle_OnRunning);
-        EnvironmentEventBus.OnGameOver.Unsubscribe(Handle_OnGameOver);
-    }
+    // private void OnEnable()
+    // {
+    //     EnvironmentEventBus.OnPause.Subscribe(Handle_OnPause);
+    //     EnvironmentEventBus.OnRunning.Subscribe(Handle_OnRunning);
+    //     EnvironmentEventBus.OnGameOver.Subscribe(Handle_OnGameOver);
+    // }
+    //
+    // private void OnDisable()
+    // {
+    //     EnvironmentEventBus.OnPause.Unsubscribe(Handle_OnPause);
+    //     EnvironmentEventBus.OnRunning.Unsubscribe(Handle_OnRunning);
+    //     EnvironmentEventBus.OnGameOver.Unsubscribe(Handle_OnGameOver);
+    // }
 
     private void Handle_OnPause()
     {

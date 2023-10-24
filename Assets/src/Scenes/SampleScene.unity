@@ -2978,6 +2978,7 @@ GameObject:
   - component: {fileID: 1881818268}
   - component: {fileID: 1881818269}
   - component: {fileID: 1881818270}
+  - component: {fileID: 1881818271}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -3051,6 +3052,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseUI: {fileID: 1846578469}
+--- !u!114 &1881818271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881818265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7328db8af4d80649a25b9eb992d57bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
 --- !u!1 &1943948536
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,8 @@ public class ChunkSpawner : MonoBehaviour
 
     private Camera cam;
     
-    private Transform lastInstantiatedChunk;
+    private GameObject lastInstantiatedChunk;
+    private Transform lastInstantiatedChunkTransform;
     private int lastInstantiatedChunkIndex;
     private int currentCountOfChunks;
 
@@ -31,7 +32,8 @@ public class ChunkSpawner : MonoBehaviour
         switch (currentState)
         {
             case State.Spawning:
-                InstantiateRandomChunkNoRepetitions(maxSimultaneousChunks - currentCountOfChunks);
+                int missingCount = maxSimultaneousChunks - currentCountOfChunks;
+                InstantiateRandomChunkNoRepetitions(missingCount);
                 break;
             case State.NotSpawning:
                 break;
@@ -43,7 +45,7 @@ public class ChunkSpawner : MonoBehaviour
     private void Awake()
     {
         cam = Camera.main;
-        lastInstantiatedChunk = GetComponent<Transform>();
+        lastInstantiatedChunkTransform = GetComponent<Transform>();
         lastInstantiatedChunkIndex = -1;
     }
 
@@ -91,11 +93,15 @@ public class ChunkSpawner : MonoBehaviour
         {
             newChunkIndex = Random.Range(0, chunksPrefabs.Length);
         }
+
         lastInstantiatedChunk = Instantiate(chunksPrefabs[newChunkIndex],
-            lastInstantiatedChunk.position + new Vector3(0f, cam.orthographicSize * 2, 0f), Quaternion.identity,
-            chunkSpawnParent).GetComponent<Transform>();
+            lastInstantiatedChunkTransform.position + new Vector3(0f, cam.orthographicSize * 2, 0f),
+            Quaternion.identity,
+            chunkSpawnParent);
+        lastInstantiatedChunkTransform = lastInstantiatedChunk.transform;
         lastInstantiatedChunkIndex = newChunkIndex;
         currentCountOfChunks++;
+        EnvironmentEventBus.OnChunkInstantiate.Publish(lastInstantiatedChunk);
     }
 
     private void InstantiateRandomChunkNoRepetitions(int count)
@@ -107,9 +113,12 @@ public class ChunkSpawner : MonoBehaviour
     private void InstantiateRandomChunk()
     {
         lastInstantiatedChunk = Instantiate(chunksPrefabs[Random.Range(0, chunksPrefabs.Length)],
-            lastInstantiatedChunk.position + new Vector3(0f, cam.orthographicSize * 2, 0f), Quaternion.identity,
-            chunkSpawnParent).GetComponent<Transform>();
+            lastInstantiatedChunkTransform.position + new Vector3(0f, cam.orthographicSize * 2, 0f),
+            Quaternion.identity,
+            chunkSpawnParent);
+        lastInstantiatedChunkTransform = lastInstantiatedChunk.transform;
         currentCountOfChunks++;
+        EnvironmentEventBus.OnChunkInstantiate.Publish(lastInstantiatedChunk);
     }
 
     private void InstantiateRandomChunk(int count)

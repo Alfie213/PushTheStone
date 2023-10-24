@@ -302,6 +302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce2103040c084c04493bfea4a440d03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSceneName: SampleScene
+  mainMenuSceneName: MainMenuScene
   loadingScreen: {fileID: 2031112515}
   loadingSlider: {fileID: 1056674353}
 --- !u!1 &176684058
@@ -662,8 +664,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 135798972}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+        m_MethodName: LoadGameScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

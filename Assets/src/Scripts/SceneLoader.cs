@@ -5,12 +5,27 @@ using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
+    [Header("Scene names")]
+    [SerializeField] private string gameSceneName;
+    [SerializeField] private string mainMenuSceneName;
+    
+    [Header("Loading setup")]
     [SerializeField] private GameObject loadingScreen;
     [SerializeField] private Slider loadingSlider;
 
-    public void LoadScene(string sceneName)
+    private void Awake()
     {
-        StartCoroutine(LoadSceneAsync(sceneName));
+        DontDestroyOnLoad(this);
+    }
+
+    public void LoadGameScene()
+    {
+        StartCoroutine(LoadSceneAsync(gameSceneName));
+    }
+    
+    public void LoadMainMenuScene()
+    {
+        StartCoroutine(LoadSceneAsync(mainMenuSceneName));
     }
 
     private IEnumerator LoadSceneAsync(string sceneName)

@@ -57,17 +57,23 @@ public class ChunkMover : MonoBehaviour
     private void Update()
     {
         if (currentState is State.NotMoving) return;
-        
+
+        List<GameObject> chunksToRemove = new List<GameObject>();
         foreach (GameObject chunk in chunks)
         {
             chunk.transform.position += Vector3.down * (speed * Time.deltaTime);
             
             if (chunk.transform.position.y <= -cam.orthographicSize * 2)
             {
-                chunks.Remove(chunk);
-                Destroy(chunk);
-                EnvironmentEventBus.OnChunkDestroy.Publish();
+                chunksToRemove.Add(chunk);
             }
+        }
+
+        foreach (GameObject chunk in chunksToRemove)
+        {
+            chunks.Remove(chunk);
+            Destroy(chunk);
+            EnvironmentEventBus.OnChunkDestroy.Publish();
         }
     }
 

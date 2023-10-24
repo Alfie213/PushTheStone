@@ -13,11 +13,6 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] private GameObject loadingScreen;
     [SerializeField] private Slider loadingSlider;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(this);
-    }
-
     public void LoadGameScene()
     {
         StartCoroutine(LoadSceneAsync(gameSceneName));

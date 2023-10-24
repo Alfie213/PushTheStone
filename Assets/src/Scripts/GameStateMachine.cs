@@ -46,15 +46,15 @@ public class GameStateMachine : MonoBehaviour
         switch (currentState)
         {
             case State.Pause:
-                Debug.Log("Pause");
+                // Debug.Log("Pause");
                 EnvironmentEventBus.OnPause.Publish();
                 break;
             case State.Running:
-                Debug.Log("Running");
+                // Debug.Log("Running");
                 EnvironmentEventBus.OnRunning.Publish();
                 break;
             case State.GameOver:
-                Debug.Log("GameOver");
+                // Debug.Log("GameOver");
                 EnvironmentEventBus.OnGameOver.Publish();
                 break;
             default:

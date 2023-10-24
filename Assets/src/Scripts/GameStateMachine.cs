@@ -61,4 +61,9 @@ public class GameStateMachine : MonoBehaviour
                 throw new ArgumentOutOfRangeException();
         }
     }
+
+    public void Pause()
+    {
+        ChangeState(State.Pause);
+    }
 }

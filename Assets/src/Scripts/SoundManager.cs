@@ -9,8 +9,9 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip gameOver;
 
     [Header("Effects")]
-    private const int CountEffectsVariables = 4;
+    private const int CountEffectsVariables = 5;
     [SerializeField] private AudioClip buttonClick;
+    [SerializeField] private AudioClip[] stoneShatterings;
     [SerializeField] private AudioClip[] stoneMovements;
     [SerializeField] private AudioClip[] wallHits;
     [SerializeField] private AudioClip[] powerUps;
@@ -23,6 +24,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioSource songsAudioSource;
     [SerializeField] private AudioSource gameOverAudioSource;
     [SerializeField] private AudioSource buttonClickAudioSource;
+    [SerializeField] private AudioSource stoneShatteringAudioSource;
     [SerializeField] private AudioSource stoneMovementsAudioSource;
     [SerializeField] private AudioSource wallHitsAudioSource;
     [SerializeField] private AudioSource powerUpsAudioSource;
@@ -30,10 +32,51 @@ public class SoundManager : MonoBehaviour
     private AudioSource[] musicAudioSources;
     private AudioSource[] effectsAudioSources;
 
+    public void PlayButtonClick()
+    {
+        buttonClickAudioSource.Play();
+    }
+
+    private void PlayRandomSong()
+    {
+        songsAudioSource.clip = songs[Random.Range(0, songs.Length)];
+        songsAudioSource.Play();
+    }
+
+    private void PlayGameOver()
+    {
+        gameOverAudioSource.Play();
+    }
+
+    private void PlayRandomStoneShattering()
+    {
+        stoneShatteringAudioSource.clip = stoneShatterings[Random.Range(0, stoneShatterings.Length)];
+        stoneShatteringAudioSource.Play();
+    }
+    
+    private void PlayRandomStoneMovement()
+    {
+        stoneMovementsAudioSource.clip = stoneMovements[Random.Range(0, stoneMovements.Length)];
+        stoneMovementsAudioSource.Play();
+    }
+
+    private void PlayRandomWallHit()
+    {
+        wallHitsAudioSource.clip = wallHits[Random.Range(0, wallHits.Length)];
+        wallHitsAudioSource.Play();
+    }
+
+    private void PlayRandomPowerUp()
+    {
+        powerUpsAudioSource.clip = powerUps[Random.Range(0, powerUps.Length)];
+        wallHitsAudioSource.Play();
+    }
+    
     private void Awake()
     {
         musicAudioSources = new AudioSource[CountMusicVariables];
         effectsAudioSources = new AudioSource[CountEffectsVariables];
+        InitSoloAudioSources();
         DontDestroyOnLoad(this);
     }
 
@@ -75,32 +118,32 @@ public class SoundManager : MonoBehaviour
     
     private void Handle_OnGameSceneLoad()
     {
-        
+        PlayRandomSong();
     }
     
     private void Handle_OnGameOver()
     {
-        
+        PlayGameOver();
     }
 
     private void Handle_OnStoneCollideObstacle()
     {
-        
+        PlayRandomStoneShattering();
     }
 
     private void Handle_OnStoneMove()
     {
-        
+        PlayRandomStoneMovement();
     }
 
     private void Handle_OnPowerUpPickUp()
     {
-        
+        PlayRandomPowerUp();
     }
     
     private void Handle_OnStoneCollideWall()
     {
-        
+        PlayRandomWallHit();
     }
 
     private void ChangeMusicVolume(float value)
@@ -117,5 +160,11 @@ public class SoundManager : MonoBehaviour
         {
             audioSource.volume = value;
         }
+    }
+
+    private void InitSoloAudioSources() // Solo AudioSource means, that this AudioSource is playing only one AudioClip.
+    {
+        gameOverAudioSource.clip = gameOver;
+        buttonClickAudioSource.clip = buttonClick;
     }
 }

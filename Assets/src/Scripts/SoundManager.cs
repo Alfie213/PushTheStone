@@ -30,9 +30,6 @@ public class SoundManager : MonoBehaviour
     private AudioSource[] musicAudioSources;
     private AudioSource[] effectsAudioSources;
 
-    private float musicVolume;
-    private float effectsVolume;
-
     private void Awake()
     {
         musicAudioSources = new AudioSource[CountMusicVariables];
@@ -68,12 +65,12 @@ public class SoundManager : MonoBehaviour
 
     private void Handle_onMusicVolumeChanged(float value)
     {
-        musicVolume = value;
+        ChangeMusicVolume(value);
     }
     
     private void Handle_onEffectsVolumeChanged(float value)
     {
-        effectsVolume = value;
+        ChangeEffectsVolume(value);
     }
     
     private void Handle_OnGameSceneLoad()
@@ -106,19 +103,19 @@ public class SoundManager : MonoBehaviour
         
     }
 
-    private void ApplyMusicSettings()
+    private void ChangeMusicVolume(float value)
     {
         foreach (AudioSource audioSource in musicAudioSources)
         {
-            audioSource.volume = musicVolume;
+            audioSource.volume = value;
         }
     }
 
-    private void ApplyEffectsSettings()
+    private void ChangeEffectsVolume(float value)
     {
         foreach (AudioSource audioSource in effectsAudioSources)
         {
-            audioSource.volume = effectsVolume;
+            audioSource.volume = value;
         }
     }
 }

@@ -79,6 +79,8 @@ public class StoneMover : MonoBehaviour
             rb.AddForce(force);
             // Debug.Log("force added");
         }
+        
+        EnvironmentEventBus.OnStoneMove.Publish();
     }
 
     private void Handle_OnMouseEnterScreen()

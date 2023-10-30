@@ -1,14 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(AudioSource))]
 public class SoundManager : MonoBehaviour
 {
     [Header("Music")]
+    private const int CountMusicVariables = 2;
     [SerializeField] private AudioClip[] songs;
     [SerializeField] private AudioClip gameOver;
 
     [Header("Effects")]
+    private const int CountEffectsVariables = 4;
     [SerializeField] private AudioClip buttonClick;
     [SerializeField] private AudioClip[] stoneMovements;
     [SerializeField] private AudioClip[] wallHits;
@@ -18,14 +19,24 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private Slider musicVolumeSlider;
     [SerializeField] private Slider effectsVolumeSlider;
 
-    private AudioSource audioSource;
+    [Header("AudioSources")]
+    [SerializeField] private AudioSource songsAudioSource;
+    [SerializeField] private AudioSource gameOverAudioSource;
+    [SerializeField] private AudioSource buttonClickAudioSource;
+    [SerializeField] private AudioSource stoneMovementsAudioSource;
+    [SerializeField] private AudioSource wallHitsAudioSource;
+    [SerializeField] private AudioSource powerUpsAudioSource;
+    
+    private AudioSource[] musicAudioSources;
+    private AudioSource[] effectsAudioSources;
 
     private float musicVolume;
     private float effectsVolume;
 
     private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        musicAudioSources = new AudioSource[CountMusicVariables];
+        effectsAudioSources = new AudioSource[CountEffectsVariables];
         DontDestroyOnLoad(this);
     }
 
@@ -97,11 +108,17 @@ public class SoundManager : MonoBehaviour
 
     private void ApplyMusicSettings()
     {
-        audioSource.volume = musicVolume;
+        foreach (AudioSource audioSource in musicAudioSources)
+        {
+            audioSource.volume = musicVolume;
+        }
     }
 
     private void ApplyEffectsSettings()
     {
-        audioSource.volume = effectsVolume;
+        foreach (AudioSource audioSource in effectsAudioSources)
+        {
+            audioSource.volume = effectsVolume;
+        }
     }
 }

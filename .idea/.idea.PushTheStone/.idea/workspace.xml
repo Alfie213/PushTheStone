@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d743fd4d-d12b-4ae7-95d1-d723d14e6dd3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/src/Sprites/Stone/Prepared/Desert stone/stone.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Sprites/Stone/Prepared/Desert stone/stone.psd.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/Chunk/Prefabs/Chunk1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/Chunk/Prefabs/Chunk1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/Chunk/Prefabs/Chunk2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/Chunk/Prefabs/Chunk2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +115,7 @@
       <workItem from="1698070056874" duration="607000" />
       <workItem from="1698095829025" duration="7808000" />
       <workItem from="1698142633329" duration="4263000" />
-      <workItem from="1698659289826" duration="857000" />
+      <workItem from="1698659289826" duration="2012000" />
     </task>
     <servers />
   </component>

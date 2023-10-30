@@ -23,6 +23,16 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(LoadSceneAsync(mainMenuSceneName));
     }
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += Handle_sceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= Handle_sceneLoaded;
+    }
+
     private IEnumerator LoadSceneAsync(string sceneName)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
@@ -34,6 +44,14 @@ public class SceneLoader : MonoBehaviour
             loadingSlider.value = Mathf.Clamp01(operation.progress / 0.9f);
 
             yield return null;
+        }
+    }
+
+    private void Handle_sceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == gameSceneName)
+        {
+            EnvironmentEventBus.OnGameSceneLoad.Publish();
         }
     }
 }

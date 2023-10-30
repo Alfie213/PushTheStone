@@ -16,4 +16,9 @@ public static class EnvironmentEventBus
     public static readonly CustomAction OnPause = new CustomAction();
     public static readonly CustomAction OnRunning = new CustomAction();
     public static readonly CustomAction OnGameOver = new CustomAction();
+
+    public static readonly CustomAction OnGameSceneLoad = new CustomAction();
+    public static readonly CustomAction OnStoneMove = new CustomAction();
+    public static readonly CustomAction OnPowerUpPickUp = new CustomAction();
+    public static readonly CustomAction OnStoneCollideWall = new CustomAction();
 }

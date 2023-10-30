@@ -761,7 +761,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 484762cb65758dc4d9f76ad064e45895, type: 3}
   - {fileID: 8300000, guid: 46c7934c095b1e347864ab1ed332f89f, type: 3}
   - {fileID: 8300000, guid: a74f33769501c134d9f659823b112ade, type: 3}
-  gameOver: {fileID: 0}
+  gameOver: {fileID: 8300000, guid: 2a9cd7f94a57696459830c7f5f0c3335, type: 3}
   buttonClick: {fileID: 8300000, guid: c5bd4a224125e8a4696fd18c14361c17, type: 3}
   stoneMovements:
   - {fileID: 8300000, guid: 5dff43c862f71674fba88343306e004a, type: 3}

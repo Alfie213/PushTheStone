@@ -10,8 +10,8 @@ public class SoundManager : MonoBehaviour
 
     [Header("Effects")]
     [SerializeField] private AudioClip buttonClick;
-    [SerializeField] private AudioClip stoneMoving;
-    [SerializeField] private AudioClip hitWall;
+    [SerializeField] private AudioClip[] stoneMovements;
+    [SerializeField] private AudioClip[] wallHits;
     [SerializeField] private AudioClip[] powerUps;
 
     [Header("UI")]
@@ -26,6 +26,7 @@ public class SoundManager : MonoBehaviour
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        DontDestroyOnLoad(this);
     }
 
     private void OnEnable()
@@ -48,5 +49,15 @@ public class SoundManager : MonoBehaviour
     private void Handle_onEffectsVolumeChanged(float value)
     {
         effectsVolume = value;
+    }
+
+    private void ApplyMusicSettings()
+    {
+        audioSource.volume = musicVolume;
+    }
+
+    private void ApplyEffectsSettings()
+    {
+        audioSource.volume = effectsVolume;
     }
 }

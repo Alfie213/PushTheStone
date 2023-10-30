@@ -286,8 +286,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 539588331}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -738,13 +737,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539588330}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 135798971}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &539588332
 MonoBehaviour:
@@ -758,12 +757,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a403e220f4746b4ca450f63b9c58b86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songs: []
-  gameover: {fileID: 0}
-  buttonClick: {fileID: 0}
-  stoneMoving: {fileID: 0}
-  hitWall: {fileID: 0}
-  powerups: []
+  songs:
+  - {fileID: 8300000, guid: 484762cb65758dc4d9f76ad064e45895, type: 3}
+  - {fileID: 8300000, guid: 46c7934c095b1e347864ab1ed332f89f, type: 3}
+  - {fileID: 8300000, guid: a74f33769501c134d9f659823b112ade, type: 3}
+  gameOver: {fileID: 0}
+  buttonClick: {fileID: 8300000, guid: c5bd4a224125e8a4696fd18c14361c17, type: 3}
+  stoneMovements:
+  - {fileID: 8300000, guid: 5dff43c862f71674fba88343306e004a, type: 3}
+  - {fileID: 8300000, guid: 153cad81dd81de44e880aae01a3071fb, type: 3}
+  wallHits:
+  - {fileID: 8300000, guid: 8e893c1f932f7534d8394bed78f4da23, type: 3}
+  - {fileID: 8300000, guid: e9235e79722d2d144997be037948f4ce, type: 3}
+  - {fileID: 8300000, guid: cc3dfacfa3f921841b63b16c9aa886ce, type: 3}
+  - {fileID: 8300000, guid: ee672a3745acfd54098b7026c44b5134, type: 3}
+  powerUps:
+  - {fileID: 8300000, guid: 697e67f6f397e5041a3a4a1c66ca5656, type: 3}
+  - {fileID: 8300000, guid: 6d1e45a7e2337bb4b8ca57d1deb8c556, type: 3}
   musicVolumeSlider: {fileID: 0}
   effectsVolumeSlider: {fileID: 0}
 --- !u!82 &539588333

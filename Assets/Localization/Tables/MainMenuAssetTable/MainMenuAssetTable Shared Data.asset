@@ -19,6 +19,10 @@ MonoBehaviour:
     m_Key: MainMenuScene/Canvas/Buttons/ChangeLanguage
     m_Metadata:
       m_Items: []
+  - m_Id: 3977812348928
+    m_Key: MainMenuScene/Canvas/Background
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 5627158728497168409
@@ -36,6 +40,11 @@ MonoBehaviour:
       data:
         m_Entries:
         - m_KeyId: 361261142016
+          m_TableCodes:
+          - en
+          - tr
+          - ru
+        - m_KeyId: 3977812348928
           m_TableCodes:
           - en
           - tr

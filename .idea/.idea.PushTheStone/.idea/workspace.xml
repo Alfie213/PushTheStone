@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d743fd4d-d12b-4ae7-95d1-d723d14e6dd3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Localization/Tables/MainMenuStringTable/MainMenuStringTable Shared Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/Tables/MainMenuStringTable/MainMenuStringTable Shared Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Localization/Tables/MainMenuStringTable/MainMenuStringTable_en.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/Tables/MainMenuStringTable/MainMenuStringTable_en.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Localization/Tables/MainMenuStringTable/MainMenuStringTable_tr.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/Tables/MainMenuStringTable/MainMenuStringTable_tr.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scenes/MainMenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scenes/MainMenuScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/LocalizationSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/LocalizationSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/Sprites/Background/MainMenuBackground/PSD/MainMenuBackgroundSignRu.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Sprites/Background/MainMenuBackground/PSD/MainMenuBackgroundSignRu.psd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +29,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Controls/InputControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Plugins/UI/InputSystemUIInputModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/Editor/Property Variants/ScenePropertyTracker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/Editor/Settings/LocalizationTableCollection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_Private.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_UGUI_Private.cs" root0="SKIP_HIGHLIGHTING" />

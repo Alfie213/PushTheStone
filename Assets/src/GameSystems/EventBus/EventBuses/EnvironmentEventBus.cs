@@ -24,4 +24,5 @@ public static class EnvironmentEventBus
     public static readonly CustomAction OnStoneCollideWall = new CustomAction();
     
     public static readonly CustomAction OnShieldPickUp = new CustomAction();
+    public static readonly CustomAction OnScoreBoosterPickUp = new CustomAction();
 }

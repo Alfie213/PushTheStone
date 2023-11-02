@@ -14,7 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TableCollectionName: MainMenuStringTable
   m_TableCollectionNameGuidString: 4cac0faaa2f2b0441899016df50790a4
-  m_Entries: []
+  m_Entries:
+  - m_Id: 10914599760531456
+    m_Key: MainMenuScene/Canvas/Buttons/Play/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10916315407028224
+    m_Key: MainMenuScene/Canvas/Buttons/Settings/Text (TMP)
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

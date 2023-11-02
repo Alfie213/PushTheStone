@@ -1360,34 +1360,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TrackedObjects:
-  - rid: 5627158728497168399
+  - rid: 5627158728497168406
   references:
     version: 2
     RefIds:
-    - rid: 5627158728497168399
+    - rid: 5627158728497168406
       type: {class: TrackedUGuiGraphic, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects, asm: Unity.Localization}
       data:
         m_Target: {fileID: 667519093}
         m_TrackedProperties:
           items:
-          - rid: 5627158728497168400
+          - rid: 5627158728497168407
         m_UpdateType: 0
-    - rid: 5627158728497168400
-      type: {class: UnityObjectProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
+    - rid: 5627158728497168407
+      type: {class: LocalizedAssetProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
       data:
+        m_Localized:
+          rid: 5627158728497168408
         m_PropertyPath: m_Sprite
-        m_TypeString: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        m_VariantData:
-        - localeIdentifier:
-            m_Code: en
-          value: {fileID: 21300000, guid: 647f4963e12428f48a570409adc063d3, type: 3}
-        - localeIdentifier:
-            m_Code: tr
-          value: {fileID: 21300000, guid: ea964052b3b22f5488e83c088473f896, type: 3}
-        - localeIdentifier:
-            m_Code: ru
-          value: {fileID: 21300000, guid: c8bfb4fe52cd39243887f71de5bfc9be, type: 3}
+    - rid: 5627158728497168408
+      type: {class: LocalizedSprite, ns: UnityEngine.Localization, asm: Unity.Localization}
+      data:
+        m_TableReference:
+          m_TableCollectionName: GUID:7162c502e4e41864686253a285728d7c
+        m_TableEntryReference:
+          m_KeyId: 361261142016
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
 --- !u!1 &696377627
 GameObject:
   m_ObjectHideFlags: 0

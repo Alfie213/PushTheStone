@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,6 +15,29 @@ public class StoneMover : MonoBehaviour
     private bool isHoldingKeyboard;
 
     private float keyboardDelta;
+
+    private State currentState;
+
+    private enum State
+    {
+        ControlEnabled,
+        ControlDisabled
+    }
+
+    private void ChangeState(State state)
+    {
+        currentState = state;
+
+        switch (currentState)
+        {
+            case State.ControlEnabled:
+                break;
+            case State.ControlDisabled:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+    }
 
     public void OnMoveByMouse(InputAction.CallbackContext context)
     {
@@ -44,22 +68,32 @@ public class StoneMover : MonoBehaviour
     {
         cam = Camera.main;
         rb = GetComponent<Rigidbody2D>();
+        
+        currentState = State.ControlDisabled;
     }
 
     private void OnEnable()
     {
         EnvironmentEventBus.OnMouseEnterScreen.Subscribe(Handle_OnMouseEnterScreen);
         EnvironmentEventBus.OnMouseExitScreen.Subscribe(Handle_OnMouseExitScreen);
+        
+        EnvironmentEventBus.OnPause.Subscribe(Handle_OnPause);
+        EnvironmentEventBus.OnRunning.Subscribe(Handle_OnRunning);
     }
 
     private void OnDisable()
     {
         EnvironmentEventBus.OnMouseEnterScreen.Unsubscribe(Handle_OnMouseEnterScreen);
         EnvironmentEventBus.OnMouseExitScreen.Unsubscribe(Handle_OnMouseExitScreen);
+        
+        EnvironmentEventBus.OnPause.Subscribe(Handle_OnPause);
+        EnvironmentEventBus.OnRunning.Subscribe(Handle_OnRunning);
     }
 
     private void Update()
     {
+        if (currentState == State.ControlDisabled) return;
+        
         if (!isHoldingMouse && !isHoldingKeyboard) return;
         
         if (isHoldingMouse && isMouseInScreen)
@@ -93,5 +127,15 @@ public class StoneMover : MonoBehaviour
     {
         // Debug.Log("false");
         isMouseInScreen = false;
+    }
+
+    private void Handle_OnPause()
+    {
+        ChangeState(State.ControlDisabled);
+    }
+
+    private void Handle_OnRunning()
+    {
+        ChangeState(State.ControlEnabled);
     }
 }

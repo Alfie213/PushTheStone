@@ -11,9 +11,18 @@ public static class EnvironmentEventBus
     public static readonly CustomAction<GameObject> OnChunkInstantiate = new CustomAction<GameObject>();
     public static readonly CustomAction OnChunkDestroy = new CustomAction();
     
-    public static readonly CustomAction OnStoneCollidedObstacle = new CustomAction();
+    public static readonly CustomAction OnStoneCollideObstacle = new CustomAction();
+    public static readonly CustomAction OnStoneCollideObstacleWithShield = new CustomAction();
 
     public static readonly CustomAction OnPause = new CustomAction();
     public static readonly CustomAction OnRunning = new CustomAction();
     public static readonly CustomAction OnGameOver = new CustomAction();
+
+    public static readonly CustomAction OnGameSceneLoad = new CustomAction();
+    public static readonly CustomAction OnStoneMove = new CustomAction();
+    public static readonly CustomAction OnPowerUpPickUp = new CustomAction();
+    public static readonly CustomAction OnStoneCollideWall = new CustomAction();
+    
+    public static readonly CustomAction OnShieldPickUp = new CustomAction();
+    public static readonly CustomAction OnScoreBoosterPickUp = new CustomAction();
 }

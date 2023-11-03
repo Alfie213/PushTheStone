@@ -1,17 +1,10 @@
 using TMPro;
 using UnityEngine;
 
-[RequireComponent(typeof(TextMeshProUGUI))]
 public class ScoreUI : MonoBehaviour
 {
     [SerializeField] private ScoreManager scoreManager;
-    
-    private TextMeshProUGUI scoreText;
-
-    private void Awake()
-    {
-        scoreText = GetComponent<TextMeshProUGUI>();
-    }
+    [SerializeField] private TextMeshProUGUI scoreText;
 
     private void Update()
     {

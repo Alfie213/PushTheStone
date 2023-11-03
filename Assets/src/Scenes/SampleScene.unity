@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 45960026}
   - component: {fileID: 45960025}
   m_Layer: 5
-  m_Name: CountingText
+  m_Name: CountdownText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1130,7 +1130,7 @@ GameObject:
   - component: {fileID: 482412238}
   - component: {fileID: 482412237}
   m_Layer: 5
-  m_Name: CountingBackground
+  m_Name: CountdownBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1510,7 +1510,6 @@ GameObject:
   - component: {fileID: 591940290}
   - component: {fileID: 591940289}
   - component: {fileID: 591940288}
-  - component: {fileID: 591940291}
   m_Layer: 5
   m_Name: PauseTapToPlayButton
   m_TagString: Untagged
@@ -1581,31 +1580,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 591940289}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 591940291}
-        m_TargetAssemblyTypeName: PauseImageButton, Assembly-CSharp
-        m_MethodName: Handle_OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 526697311}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &591940289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1644,23 +1619,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591940286}
   m_CullTransparentMesh: 1
---- !u!114 &591940291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591940286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d72b33b8e8c16a7438fd0ef46f3a88df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 3
-  pauseButton: {fileID: 0}
-  countdown: {fileID: 0}
-  countdownScreen: {fileID: 0}
-  pauseScreen: {fileID: 0}
 --- !u!1 &593688465
 GameObject:
   m_ObjectHideFlags: 0
@@ -4535,12 +4493,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2018940487}
   m_Layer: 5
-  m_Name: CountingScreen
+  m_Name: CountdownScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2018940487
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4711,6 +4669,7 @@ GameObject:
   - component: {fileID: 2143999327}
   - component: {fileID: 2143999329}
   - component: {fileID: 2143999330}
+  - component: {fileID: 2143999331}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -4789,3 +4748,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 1439631186}
   scoreText: {fileID: 361347228}
+--- !u!114 &2143999331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143999325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72b33b8e8c16a7438fd0ef46f3a88df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 3
+  pauseScreen: {fileID: 1846578469}
+  pauseTapToPlayButton: {fileID: 591940288}
+  pauseButton: {fileID: 526697311}
+  countdownScreen: {fileID: 2018940486}
+  countdownText: {fileID: 45960025}

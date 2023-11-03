@@ -4,31 +4,29 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Image), typeof(Button))]
 public class PauseScreen : MonoBehaviour
 {
     [SerializeField, Min(0f)] private float delay;
     
     [Header("Pause")]
+    [SerializeField] private GameObject pauseScreen;
+    [SerializeField] private Button pauseTapToPlayButton;
     [SerializeField] private GameObject pauseButton;
-    [SerializeField] private TextMeshProUGUI countdown;
     
     [Header("Countdown")]
     [SerializeField] private GameObject countdownScreen;
-    [SerializeField] private GameObject pauseScreen;
-
+    [SerializeField] private TextMeshProUGUI countdownText;
+    
     private const float CountdownUpdateDelay = 1f;
-
-    private Button button;
 
     private void OnEnable()
     {
-        button.onClick.AddListener(Handle_OnClick);
+        pauseTapToPlayButton.onClick.AddListener(Handle_OnClick);
     }
 
     private void OnDisable()
     {
-        button.onClick.RemoveListener(Handle_OnClick);
+        pauseTapToPlayButton.onClick.RemoveListener(Handle_OnClick);
     }
 
     public void Handle_OnClick()
@@ -42,12 +40,13 @@ public class PauseScreen : MonoBehaviour
         countdownScreen.SetActive(true);
 
         int timeLeft = Convert.ToInt32(delay);
+        countdownText.text = timeLeft.ToString();
 
         while (timeLeft > 0)
         {
             yield return new WaitForSeconds(CountdownUpdateDelay);
             timeLeft -= 1;
-            countdown.text = timeLeft.ToString();
+            countdownText.text = timeLeft.ToString();
         }
         
         countdownScreen.SetActive(false);

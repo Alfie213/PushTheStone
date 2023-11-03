@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d743fd4d-d12b-4ae7-95d1-d723d14e6dd3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scenes/MainMenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scenes/MainMenuScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +16,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/86acb61e0d2b4b36bc20af11093be9a5157e00/f7/b4abcda3/Time.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f05995e23db3451db29e47ea3bac14c689e00/9e/9026530d/IDataBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Samples/Input System/1.4.4/Simple Demo/SimpleController_UsingState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/src/CurveScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/src/GameSystems/EventBus/EventBuses/EnvironmentEventBus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/src/GameSystems/PowerUp/Scripts/ScoreBooster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/src/Scripts/LanguageSwitcher.cs" root0="FORCE_HIGHLIGHTING" />

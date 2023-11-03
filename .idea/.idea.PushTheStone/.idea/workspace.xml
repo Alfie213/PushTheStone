@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d743fd4d-d12b-4ae7-95d1-d723d14e6dd3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/EventBus/EventBuses/EnvironmentEventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/EventBus/EventBuses/EnvironmentEventBus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scripts/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scripts/GameStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scripts/UI/Pause/PauseImageButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scripts/UI/Pause/PauseImageButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scripts/UI/Pause/PauseUISwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scripts/UI/Pause/PauseUISwitcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/Scripts/UI/Pause/PauseImageButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/Scripts/UI/Pause/PauseImageButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/Scripts/UI/Pause/PauseScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scripts/UI/Pause/PauseScreen.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

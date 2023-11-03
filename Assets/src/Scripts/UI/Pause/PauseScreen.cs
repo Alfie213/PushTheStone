@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Image), typeof(Button))]
-public class PauseImageButton : MonoBehaviour
+public class PauseScreen : MonoBehaviour
 {
     [SerializeField, Min(0f)] private float delay;
     

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d743fd4d-d12b-4ae7-95d1-d723d14e6dd3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scripts/UI/Pause/PauseScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scripts/UI/Pause/PauseScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +124,7 @@
       <workItem from="1698915249172" duration="3510000" />
       <workItem from="1698952126656" duration="1370000" />
       <workItem from="1698995644988" duration="297000" />
+      <workItem from="1699021245669" duration="679000" />
     </task>
     <servers />
   </component>

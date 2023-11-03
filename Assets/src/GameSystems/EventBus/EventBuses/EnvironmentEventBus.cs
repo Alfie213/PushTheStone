@@ -6,7 +6,7 @@ public static class EnvironmentEventBus
     // public static readonly CustomAction OnMouseDownScreen = new CustomAction();
     public static readonly CustomAction OnMouseExitScreen = new CustomAction();
 
-    public static readonly CustomAction OnPauseUIClick = new CustomAction();
+    public static readonly CustomAction OnUnpause = new CustomAction();
 
     public static readonly CustomAction<GameObject> OnChunkInstantiate = new CustomAction<GameObject>();
     public static readonly CustomAction OnChunkDestroy = new CustomAction();

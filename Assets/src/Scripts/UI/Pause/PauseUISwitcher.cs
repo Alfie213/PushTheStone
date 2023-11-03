@@ -7,13 +7,13 @@ public class PauseUISwitcher : MonoBehaviour
     private void OnEnable()
     {
         EnvironmentEventBus.OnPause.Subscribe(Handle_OnPause);
-        EnvironmentEventBus.OnPauseUIClick.Subscribe(Handle_OnPauseUIClick);
+        EnvironmentEventBus.OnUnpause.Subscribe(Handle_OnPauseUIClick);
     }
 
     private void OnDisable()
     {
         EnvironmentEventBus.OnPause.Unsubscribe(Handle_OnPause);
-        EnvironmentEventBus.OnPauseUIClick.Unsubscribe(Handle_OnPauseUIClick);
+        EnvironmentEventBus.OnUnpause.Unsubscribe(Handle_OnPauseUIClick);
     }
 
     private void Handle_OnPause()

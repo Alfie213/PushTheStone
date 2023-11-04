@@ -25,4 +25,6 @@ public static class EnvironmentEventBus
     
     public static readonly CustomAction OnShieldPickUp = new CustomAction();
     public static readonly CustomAction OnScoreBoosterPickUp = new CustomAction();
+    
+    public static readonly CustomAction<float> OnScoreChange = new CustomAction<float>();
 }

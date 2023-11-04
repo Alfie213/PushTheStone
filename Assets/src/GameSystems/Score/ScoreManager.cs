@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public int CurrentScore => Convert.ToInt32(currentScore);
-    
     [SerializeField] private float defaultScoreMultiplier;
     
     [Header("ScoreBooster")]
@@ -69,9 +67,11 @@ public class ScoreManager : MonoBehaviour
         {
             case State.DefaultCounting:
                 currentScore += defaultScoreMultiplier * Time.deltaTime;
+                EnvironmentEventBus.OnScoreChange.Publish(currentScore);
                 break;
             case State.BoostCounting:
                 currentScore += scoreBoosterMultiplier * Time.deltaTime;
+                EnvironmentEventBus.OnScoreChange.Publish(currentScore);
                 break;
             case State.NotCounting:
                 break;

@@ -21,7 +21,8 @@ public class ChunkSpawner : MonoBehaviour
 
     private enum State
     {
-        Spawning,
+        DefaultSpawning,
+        AnnihilationSpawning,
         NotSpawning
     }
 
@@ -31,9 +32,13 @@ public class ChunkSpawner : MonoBehaviour
 
         switch (currentState)
         {
-            case State.Spawning:
-                int missingCount = maxSimultaneousChunks - currentCountOfChunks;
-                InstantiateRandomChunkNoRepetitions(missingCount);
+            case State.DefaultSpawning:
+                int missingCountDefaultChunks = maxSimultaneousChunks - currentCountOfChunks;
+                InstantiateRandomChunksNoRepetitions(missingCountDefaultChunks);
+                break;
+            case State.AnnihilationSpawning:
+                int missingCountAnnihilationChunks = maxSimultaneousChunks - currentCountOfChunks;
+                InstantiateRandomChunksNoRepetitions(missingCountAnnihilationChunks);
                 break;
             case State.NotSpawning:
                 break;
@@ -55,6 +60,7 @@ public class ChunkSpawner : MonoBehaviour
         EnvironmentEventBus.OnGameStart.Subscribe(Handle_OnRunning);
         EnvironmentEventBus.OnGameOver.Subscribe(Handle_OnGameOver);
         EnvironmentEventBus.OnChunkDestroy.Subscribe(Handle_OnChunkDestroy);
+        EnvironmentEventBus.OnAnnihilationRunning.Subscribe(Handle_OnAnnihilationRunning);
     }
 
     private void OnDisable()
@@ -63,6 +69,7 @@ public class ChunkSpawner : MonoBehaviour
         EnvironmentEventBus.OnGameStart.Unsubscribe(Handle_OnRunning);
         EnvironmentEventBus.OnGameOver.Unsubscribe(Handle_OnGameOver);
         EnvironmentEventBus.OnChunkDestroy.Unsubscribe(Handle_OnChunkDestroy);
+        EnvironmentEventBus.OnAnnihilationRunning.Unsubscribe(Handle_OnAnnihilationRunning);
     }
 
     private void Handle_OnPause()
@@ -72,7 +79,7 @@ public class ChunkSpawner : MonoBehaviour
 
     private void Handle_OnRunning()
     {
-        ChangeState(State.Spawning);
+        ChangeState(State.DefaultSpawning);
     }
     
     private void Handle_OnGameOver()
@@ -84,6 +91,11 @@ public class ChunkSpawner : MonoBehaviour
     {
         currentCountOfChunks--;
         InstantiateRandomChunkNoRepetitions();
+    }
+
+    private void Handle_OnAnnihilationRunning()
+    {
+        ChangeState(State.AnnihilationSpawning);
     }
     
     private void InstantiateRandomChunkNoRepetitions()
@@ -101,10 +113,20 @@ public class ChunkSpawner : MonoBehaviour
         lastInstantiatedChunkTransform = lastInstantiatedChunk.transform;
         lastInstantiatedChunkIndex = newChunkIndex;
         currentCountOfChunks++;
+
+        if (currentState is State.AnnihilationSpawning)
+        {
+            Obstacle[] obstacleComponents = lastInstantiatedChunk.GetComponentsInChildren<Obstacle>();
+            foreach (Obstacle obstacleComponent in obstacleComponents)
+            {
+                obstacleComponent.ChangeState(Obstacle.State.Annihilation);
+            }
+        }
+        
         EnvironmentEventBus.OnChunkInstantiate.Publish(lastInstantiatedChunk);
     }
 
-    private void InstantiateRandomChunkNoRepetitions(int count)
+    private void InstantiateRandomChunksNoRepetitions(int count)
     {
         for (int _ = 0; _ < count; _++)
             InstantiateRandomChunkNoRepetitions();

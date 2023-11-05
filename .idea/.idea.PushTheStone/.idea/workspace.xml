@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d743fd4d-d12b-4ae7-95d1-d723d14e6dd3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/EventBus/EventBuses/EnvironmentEventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/EventBus/EventBuses/EnvironmentEventBus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/Obstacle/Script/Obstacle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/Obstacle/Script/Obstacle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/Score/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/Score/ScoreManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scripts/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scripts/GameStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scripts/UI/CollideObstacleAnnihilationHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scripts/UI/CollideObstacleAnnihilationHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/Chunk/Scripts/ChunkSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/Chunk/Scripts/ChunkSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/GameSystems/Obstacle/Script/Obstacle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/GameSystems/Obstacle/Script/Obstacle.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +64,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ReSpellerSettingsId&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -138,7 +134,8 @@
       <workItem from="1699035756463" duration="595000" />
       <workItem from="1699051454688" duration="121000" />
       <workItem from="1699140695942" duration="6142000" />
-      <workItem from="1699174507873" duration="2890000" />
+      <workItem from="1699174507873" duration="3376000" />
+      <workItem from="1699192878292" duration="775000" />
     </task>
     <servers />
   </component>

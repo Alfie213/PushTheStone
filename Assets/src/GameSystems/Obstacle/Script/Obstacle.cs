@@ -7,13 +7,13 @@ public class Obstacle : MonoBehaviour
     
     private State currentState;
     
-    private enum State
+    public enum State
     {
         Default,
         Annihilation
     }
 
-    private void ChangeState(State state)
+    public void ChangeState(State state)
     {
         currentState = state;
 

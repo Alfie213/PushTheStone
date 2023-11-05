@@ -3907,6 +3907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a428c06b23be904f9c512935f652247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DEBUG_EnableAnnihilationButton: {fileID: 1692219934}
 --- !u!114 &1439631186
 MonoBehaviour:
   m_ObjectHideFlags: 0

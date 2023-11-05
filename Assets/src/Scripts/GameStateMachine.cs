@@ -1,10 +1,15 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameStateMachine : MonoBehaviour
 {
-    [SerializeField] private Button DEBUG_EnableAnnihilationButton;
+    #region Test
+    public void TEST_EnableAnnihilation()
+    {
+        ChangeState(State.AnnihilationRunning);
+    }
+    #endregion
+    
 
     private State currentState;
     
@@ -25,22 +30,12 @@ public class GameStateMachine : MonoBehaviour
     {
         EnvironmentEventBus.OnUnpause.Subscribe(Handle_OnPauseUIClick);
         EnvironmentEventBus.OnStoneCollideObstacle.Subscribe(Handle_OnStoneCollidedObstacle);
-
-        if (DEBUG_EnableAnnihilationButton.IsActive())
-        {
-            DEBUG_EnableAnnihilationButton.onClick.AddListener(TEST_EnableAnnihilation);
-        }
     }
 
     private void OnDisable()
     {
         EnvironmentEventBus.OnUnpause.Unsubscribe(Handle_OnPauseUIClick);
         EnvironmentEventBus.OnStoneCollideObstacle.Unsubscribe(Handle_OnStoneCollidedObstacle);
-        
-        if (DEBUG_EnableAnnihilationButton.IsActive())
-        {
-            DEBUG_EnableAnnihilationButton.onClick.RemoveListener(TEST_EnableAnnihilation);
-        }
     }
 
     private void Handle_OnPauseUIClick()
@@ -84,10 +79,5 @@ public class GameStateMachine : MonoBehaviour
     public void Pause()
     {
         ChangeState(State.Pause);
-    }
-
-    private void TEST_EnableAnnihilation()
-    {
-        ChangeState(State.AnnihilationRunning);
     }
 }

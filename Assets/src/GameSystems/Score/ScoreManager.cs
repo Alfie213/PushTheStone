@@ -56,6 +56,7 @@ public class ScoreManager : MonoBehaviour
         EnvironmentEventBus.OnGameOver.Subscribe(Handle_OnGameOver);
         EnvironmentEventBus.OnDefaultRunning.Subscribe(Handle_OnDefaultRunning);
         EnvironmentEventBus.OnAnnihilationRunning.Subscribe(Handle_OnAnnihilationRunning);
+        EnvironmentEventBus.OnFlyingScoreReachCurrentScore.Subscribe(Handle_OnFlyingScoreReachCurrentScore);
         EnvironmentEventBus.OnScoreBoosterPickUp.Subscribe(Handle_OnScoreBoosterPickUp);
     }
 
@@ -66,6 +67,7 @@ public class ScoreManager : MonoBehaviour
         EnvironmentEventBus.OnGameOver.Unsubscribe(Handle_OnGameOver);
         EnvironmentEventBus.OnDefaultRunning.Unsubscribe(Handle_OnDefaultRunning);
         EnvironmentEventBus.OnAnnihilationRunning.Unsubscribe(Handle_OnAnnihilationRunning);
+        EnvironmentEventBus.OnFlyingScoreReachCurrentScore.Unsubscribe(Handle_OnFlyingScoreReachCurrentScore);
         EnvironmentEventBus.OnScoreBoosterPickUp.Unsubscribe(Handle_OnScoreBoosterPickUp);
     }
 
@@ -117,6 +119,11 @@ public class ScoreManager : MonoBehaviour
         ChangeState(State.AnnihilationCounting);
     }
 
+    private void Handle_OnFlyingScoreReachCurrentScore(int obstacleAnnihilationScore)
+    {
+        IncreaseCurrentScore(obstacleAnnihilationScore);
+    }
+
     private void Handle_OnScoreBoosterPickUp()
     {
         StartBoost();
@@ -140,5 +147,11 @@ public class ScoreManager : MonoBehaviour
     {
         yield return new WaitForSeconds(boostDuration);
         ChangeState(State.DefaultCounting);
+    }
+
+    private void IncreaseCurrentScore(int value)
+    {
+        currentScore += value;
+        EnvironmentEventBus.OnScoreChange.Publish(currentScore);
     }
 }

@@ -13,6 +13,7 @@ public static class EnvironmentEventBus
     
     public static readonly CustomAction OnStoneCollideObstacle = new CustomAction();
     public static readonly CustomAction OnStoneCollideObstacleWithShield = new CustomAction();
+    public static readonly CustomAction<Vector3, int> OnStoneCollideObstacleAnnihilation = new CustomAction<Vector3, int>();
 
     public static readonly CustomAction OnGameStart = new CustomAction();
     public static readonly CustomAction OnDefaultRunning = new CustomAction();

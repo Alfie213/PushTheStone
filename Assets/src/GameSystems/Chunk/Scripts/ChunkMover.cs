@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class ChunkMover : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [SerializeField, Min(1f)] private float defaultChunkSpeed;
+    [SerializeField, Min(2f)] private float annihilationChunkSpeed;
     
     private List<GameObject> chunks;
     private Camera cam;
+    
     private State currentState;
+    private float currentChunkSpeed;
     
     private enum State
     {
-        Moving,
+        DefaultMoving,
+        AnnihilationMoving,
         NotMoving
     }
 
@@ -22,9 +26,14 @@ public class ChunkMover : MonoBehaviour
 
         switch (currentState)
         {
-            case State.Moving:
+            case State.DefaultMoving:
+                currentChunkSpeed = defaultChunkSpeed;
                 break;
             case State.NotMoving:
+                currentChunkSpeed = 0f;
+                break;
+            case State.AnnihilationMoving:
+                currentChunkSpeed = annihilationChunkSpeed;
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -44,6 +53,8 @@ public class ChunkMover : MonoBehaviour
         EnvironmentEventBus.OnGameStart.Subscribe(Handle_OnRunning);
         EnvironmentEventBus.OnGameOver.Subscribe(Handle_OnGameOver);
         EnvironmentEventBus.OnChunkInstantiate.Subscribe(Handle_OnChunkInstantiate);
+        EnvironmentEventBus.OnDefaultRunning.Subscribe(Handle_OnDefaultRunning);
+        EnvironmentEventBus.OnAnnihilationRunning.Subscribe(Handle_OnAnnihilationRunning);
     }
 
     private void OnDisable()
@@ -52,6 +63,8 @@ public class ChunkMover : MonoBehaviour
         EnvironmentEventBus.OnGameStart.Unsubscribe(Handle_OnRunning);
         EnvironmentEventBus.OnGameOver.Unsubscribe(Handle_OnGameOver);
         EnvironmentEventBus.OnChunkInstantiate.Unsubscribe(Handle_OnChunkInstantiate);
+        EnvironmentEventBus.OnDefaultRunning.Unsubscribe(Handle_OnDefaultRunning);
+        EnvironmentEventBus.OnAnnihilationRunning.Unsubscribe(Handle_OnAnnihilationRunning);
     }
 
     private void Update()
@@ -59,9 +72,10 @@ public class ChunkMover : MonoBehaviour
         if (currentState is State.NotMoving) return;
 
         List<GameObject> chunksToRemove = new List<GameObject>();
+
         foreach (GameObject chunk in chunks)
         {
-            chunk.transform.position += Vector3.down * (speed * Time.deltaTime);
+            chunk.transform.position += Vector3.down * (currentChunkSpeed * Time.deltaTime);
             
             if (chunk.transform.position.y <= -cam.orthographicSize * 2)
             {
@@ -84,7 +98,7 @@ public class ChunkMover : MonoBehaviour
 
     private void Handle_OnRunning()
     {
-        ChangeState(State.Moving);
+        ChangeState(State.DefaultMoving);
     }
     
     private void Handle_OnGameOver()
@@ -95,5 +109,15 @@ public class ChunkMover : MonoBehaviour
     private void Handle_OnChunkInstantiate(GameObject chunk)
     {
         chunks.Add(chunk);
+    }
+
+    private void Handle_OnDefaultRunning()
+    {
+        ChangeState(State.DefaultMoving);
+    }
+
+    private void Handle_OnAnnihilationRunning()
+    {
+        ChangeState(State.AnnihilationMoving);
     }
 }

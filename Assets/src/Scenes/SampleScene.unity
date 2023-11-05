@@ -3921,7 +3921,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultScoreMultiplier: 1
-  scoreBoosterMultiplier: 2
+  annihilationScoreMultiplier: 5
+  scoreBoosterMultiplier: 3
   boostDuration: 5
 --- !u!1 &1463666870
 GameObject:

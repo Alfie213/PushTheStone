@@ -5,6 +5,7 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] private float defaultScoreMultiplier;
+    [SerializeField] private float annihilationScoreMultiplier;
     
     [Header("ScoreBooster")]
     [SerializeField] private float scoreBoosterMultiplier;
@@ -18,6 +19,7 @@ public class ScoreManager : MonoBehaviour
     private enum State
     {
         DefaultCounting,
+        AnnihilationCounting,
         BoostCounting,
         NotCounting
     }
@@ -29,6 +31,8 @@ public class ScoreManager : MonoBehaviour
         switch (currentState)
         {
             case State.DefaultCounting:
+                break;
+            case State.AnnihilationCounting:
                 break;
             case State.NotCounting:
                 break;
@@ -50,6 +54,8 @@ public class ScoreManager : MonoBehaviour
         EnvironmentEventBus.OnPause.Subscribe(Handle_OnPause);
         EnvironmentEventBus.OnGameStart.Subscribe(Handle_OnRunning);
         EnvironmentEventBus.OnGameOver.Subscribe(Handle_OnGameOver);
+        EnvironmentEventBus.OnDefaultRunning.Subscribe(Handle_OnDefaultRunning);
+        EnvironmentEventBus.OnAnnihilationRunning.Subscribe(Handle_OnAnnihilationRunning);
         EnvironmentEventBus.OnScoreBoosterPickUp.Subscribe(Handle_OnScoreBoosterPickUp);
     }
 
@@ -58,6 +64,8 @@ public class ScoreManager : MonoBehaviour
         EnvironmentEventBus.OnPause.Unsubscribe(Handle_OnPause);
         EnvironmentEventBus.OnGameStart.Unsubscribe(Handle_OnRunning);
         EnvironmentEventBus.OnGameOver.Unsubscribe(Handle_OnGameOver);
+        EnvironmentEventBus.OnDefaultRunning.Unsubscribe(Handle_OnDefaultRunning);
+        EnvironmentEventBus.OnAnnihilationRunning.Unsubscribe(Handle_OnAnnihilationRunning);
         EnvironmentEventBus.OnScoreBoosterPickUp.Unsubscribe(Handle_OnScoreBoosterPickUp);
     }
 
@@ -67,6 +75,10 @@ public class ScoreManager : MonoBehaviour
         {
             case State.DefaultCounting:
                 currentScore += defaultScoreMultiplier * Time.deltaTime;
+                EnvironmentEventBus.OnScoreChange.Publish(currentScore);
+                break;
+            case State.AnnihilationCounting:
+                currentScore += annihilationScoreMultiplier * Time.deltaTime;
                 EnvironmentEventBus.OnScoreChange.Publish(currentScore);
                 break;
             case State.BoostCounting:
@@ -95,7 +107,22 @@ public class ScoreManager : MonoBehaviour
         ChangeState(State.NotCounting);
     }
 
+    private void Handle_OnDefaultRunning()
+    {
+        ChangeState(State.DefaultCounting);
+    }
+    
+    private void Handle_OnAnnihilationRunning()
+    {
+        ChangeState(State.AnnihilationCounting);
+    }
+
     private void Handle_OnScoreBoosterPickUp()
+    {
+        StartBoost();
+    }
+
+    private void StartBoost()
     {
         if (currentState == State.BoostCounting)
         {

@@ -45,6 +45,7 @@ public class GameStateMachine : MonoBehaviour
 
     private void Handle_OnPauseUIClick()
     {
+        EnvironmentEventBus.OnGameStart.Publish();
         ChangeState(State.DefaultRunning);
     }
     
@@ -65,9 +66,9 @@ public class GameStateMachine : MonoBehaviour
                 break;
             case State.DefaultRunning:
                 // Debug.Log("DefaultRunning");
-                EnvironmentEventBus.OnRunning.Publish();
                 break;
             case State.AnnihilationRunning:
+                // Debug.Log("AnnihilationRunning");
                 break;
             case State.GameOver:
                 // Debug.Log("GameOver");

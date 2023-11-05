@@ -52,7 +52,7 @@ public class ChunkSpawner : MonoBehaviour
     private void OnEnable()
     {
         EnvironmentEventBus.OnPause.Subscribe(Handle_OnPause);
-        EnvironmentEventBus.OnRunning.Subscribe(Handle_OnRunning);
+        EnvironmentEventBus.OnGameStart.Subscribe(Handle_OnRunning);
         EnvironmentEventBus.OnGameOver.Subscribe(Handle_OnGameOver);
         EnvironmentEventBus.OnChunkDestroy.Subscribe(Handle_OnChunkDestroy);
     }
@@ -60,7 +60,7 @@ public class ChunkSpawner : MonoBehaviour
     private void OnDisable()
     {
         EnvironmentEventBus.OnPause.Unsubscribe(Handle_OnPause);
-        EnvironmentEventBus.OnRunning.Unsubscribe(Handle_OnRunning);
+        EnvironmentEventBus.OnGameStart.Unsubscribe(Handle_OnRunning);
         EnvironmentEventBus.OnGameOver.Unsubscribe(Handle_OnGameOver);
         EnvironmentEventBus.OnChunkDestroy.Unsubscribe(Handle_OnChunkDestroy);
     }

@@ -78,7 +78,7 @@ public class StoneMover : MonoBehaviour
         EnvironmentEventBus.OnMouseExitScreen.Subscribe(Handle_OnMouseExitScreen);
         
         EnvironmentEventBus.OnPause.Subscribe(Handle_OnPause);
-        EnvironmentEventBus.OnRunning.Subscribe(Handle_OnRunning);
+        EnvironmentEventBus.OnGameStart.Subscribe(Handle_OnRunning);
     }
 
     private void OnDisable()
@@ -87,7 +87,7 @@ public class StoneMover : MonoBehaviour
         EnvironmentEventBus.OnMouseExitScreen.Unsubscribe(Handle_OnMouseExitScreen);
         
         EnvironmentEventBus.OnPause.Subscribe(Handle_OnPause);
-        EnvironmentEventBus.OnRunning.Subscribe(Handle_OnRunning);
+        EnvironmentEventBus.OnGameStart.Subscribe(Handle_OnRunning);
     }
 
     private void Update()

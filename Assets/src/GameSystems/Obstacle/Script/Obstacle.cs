@@ -40,7 +40,7 @@ public class Obstacle : MonoBehaviour
         EnvironmentEventBus.OnAnnihilationRunning.Unsubscribe(Handle_OnAnnihilationRunning);
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         if (!col.gameObject.TryGetComponent(out StoneProperties stoneProperties)) return;
 

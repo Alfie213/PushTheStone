@@ -66,9 +66,11 @@ public class GameStateMachine : MonoBehaviour
                 break;
             case State.DefaultRunning:
                 // Debug.Log("DefaultRunning");
+                EnvironmentEventBus.OnDefaultRunning.Publish();
                 break;
             case State.AnnihilationRunning:
                 // Debug.Log("AnnihilationRunning");
+                EnvironmentEventBus.OnAnnihilationRunning.Publish();
                 break;
             case State.GameOver:
                 // Debug.Log("GameOver");

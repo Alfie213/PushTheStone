@@ -8,7 +8,7 @@ public class GameStateMachine : MonoBehaviour
     private enum State
     {
         Pause,
-        Running,
+        DefaultRunning,
         GameOver
     }
 
@@ -31,7 +31,7 @@ public class GameStateMachine : MonoBehaviour
 
     private void Handle_OnPauseUIClick()
     {
-        ChangeState(State.Running);
+        ChangeState(State.DefaultRunning);
     }
     
     private void Handle_OnStoneCollidedObstacle()
@@ -49,8 +49,8 @@ public class GameStateMachine : MonoBehaviour
                 // Debug.Log("Pause");
                 EnvironmentEventBus.OnPause.Publish();
                 break;
-            case State.Running:
-                // Debug.Log("Running");
+            case State.DefaultRunning:
+                // Debug.Log("DefaultRunning");
                 EnvironmentEventBus.OnRunning.Publish();
                 break;
             case State.GameOver:

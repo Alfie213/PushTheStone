@@ -15,7 +15,6 @@ public class PostProcessHandler : MonoBehaviour
     private void Awake()
     {
         postProcessVolume.profile.TryGetSettings(out lensDistortion);
-        // lensDistortion.intensity.Override(20f);
     }
 
     public void StartDistortion()
@@ -30,11 +29,8 @@ public class PostProcessHandler : MonoBehaviour
 
         while (passTime <= maxCurveTime)
         {
-            float value = lensDistortionCurve.Evaluate(passTime);
-            lensDistortion.intensity.Override(value);
+            lensDistortion.intensity.Override(lensDistortionCurve.Evaluate(passTime));
             passTime += Time.deltaTime;
-            Debug.Log(passTime);
-            Debug.Log("changed");
             yield return new WaitForEndOfFrame();
         }
     }

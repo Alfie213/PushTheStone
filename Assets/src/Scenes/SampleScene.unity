@@ -2632,7 +2632,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1595205200}
         m_TargetAssemblyTypeName: PostProcessHandler, Assembly-CSharp
-        m_MethodName: StartDistortion
+        m_MethodName: TEST_StartLensDistortion
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

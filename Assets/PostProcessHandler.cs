@@ -11,26 +11,41 @@ public class PostProcessHandler : MonoBehaviour
     [SerializeField] private AnimationCurve lensDistortionCurve;
     
     private LensDistortion lensDistortion; 
+    
+    public void TEST_StartLensDistortion()
+    {
+        StartCoroutine(LensDistortion());
+    }
 
     private void Awake()
     {
         postProcessVolume.profile.TryGetSettings(out lensDistortion);
     }
 
-    public void StartDistortion()
+    private void OnEnable()
     {
-        StartCoroutine(Distortion());
+        EnvironmentEventBus.OnAnnihilationRunning.Subscribe(Handle_OnAnnihilationRunning);
     }
 
-    private IEnumerator Distortion()
+    private void OnDisable()
     {
-        float passTime = 0f;
+        EnvironmentEventBus.OnAnnihilationRunning.Unsubscribe(Handle_OnAnnihilationRunning);
+    }
+
+    private void Handle_OnAnnihilationRunning()
+    {
+        StartCoroutine(LensDistortion());
+    }
+    
+    private IEnumerator LensDistortion()
+    {
+        float elapsedTime = 0f;
         float maxCurveTime = lensDistortionCurve.keys[lensDistortionCurve.length - 1].time;
 
-        while (passTime <= maxCurveTime)
+        while (elapsedTime <= maxCurveTime)
         {
-            lensDistortion.intensity.Override(lensDistortionCurve.Evaluate(passTime));
-            passTime += Time.deltaTime;
+            lensDistortion.intensity.Override(lensDistortionCurve.Evaluate(elapsedTime));
+            elapsedTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
     }

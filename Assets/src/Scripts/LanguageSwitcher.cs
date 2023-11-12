@@ -14,7 +14,7 @@ public class LanguageSwitcher : MonoBehaviour
     private void Awake()
     {
         availableLocales = LocalizationSettings.AvailableLocales.Locales;
-        currentLocaleIndex = 0;
+        currentLocaleIndex = availableLocales.IndexOf(LocalizationSettings.SelectedLocale);
     }
     
     private void OnEnable()

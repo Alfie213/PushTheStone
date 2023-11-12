@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 613611442176
-    m_Localized: Tap to play
+    m_Localized: Tap to play!
     m_Metadata:
       m_Items: []
   references:

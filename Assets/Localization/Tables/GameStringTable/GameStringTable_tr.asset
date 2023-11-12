@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 613611442176
-    m_Localized: "Oynamak \u0130\xE7in Dokunun"
+    m_Localized: "Oynamak \u0130\xE7in Dokunun!"
     m_Metadata:
       m_Items: []
   references:

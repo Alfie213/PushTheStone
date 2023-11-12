@@ -10,6 +10,10 @@ public class PostProcessHandler : MonoBehaviour
     [Header("LensDistortion")]
     [SerializeField] private AnimationCurve lensDistortionCurve;
 
+    [Header("PostProcessProfiles")]
+    [SerializeField] private PostProcessProfile runningProfile;
+    [SerializeField] private PostProcessProfile annihilationProfile;
+
     private AutoExposure autoExposure;
     private ColorGrading colorGrading;
     private Grain grain;
@@ -47,6 +51,7 @@ public class PostProcessHandler : MonoBehaviour
     
     private void ApplyAnnihilationPostProcessEffects()
     {
+        postProcessVolume.profile = annihilationProfile;
         StartCoroutine(LensDistortion());
     }
     

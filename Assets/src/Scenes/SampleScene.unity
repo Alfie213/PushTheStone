@@ -2293,7 +2293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 0}
+  sharedProfile: {fileID: 11400000, guid: 56ef5874f56c5f6478f0fcd7bce12fb4, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1
@@ -5057,7 +5057,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  runningProfile: {fileID: 0}
+  runningProfile: {fileID: 11400000, guid: 56ef5874f56c5f6478f0fcd7bce12fb4, type: 2}
   annihilationProfile: {fileID: 11400000, guid: be7b2b1caa758dd46a74c48ce25b246e, type: 2}
 --- !u!1 &1604678138
 GameObject:

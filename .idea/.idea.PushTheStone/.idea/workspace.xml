@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d743fd4d-d12b-4ae7-95d1-d723d14e6dd3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene_Profiles/SampleSceneLensDistortion.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene_Profiles/SampleSceneLensDistortion.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +22,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/PostProcessHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PowerUpModelActivator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Samples/Input System/1.4.4/Simple Demo/SimpleController_UsingState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Test.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/src/CurveScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/src/GameSystems/EventBus/EventBuses/EnvironmentEventBus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/src/GameSystems/PowerUp/Scripts/ScoreBooster.cs" root0="FORCE_HIGHLIGHTING" />
@@ -145,6 +146,7 @@
       <workItem from="1699536429973" duration="1867000" />
       <workItem from="1699557503650" duration="5604000" />
       <workItem from="1699744186837" duration="595000" />
+      <workItem from="1699816402984" duration="1036000" />
     </task>
     <servers />
   </component>

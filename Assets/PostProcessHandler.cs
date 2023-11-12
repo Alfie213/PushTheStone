@@ -13,12 +13,8 @@ public class PostProcessHandler : MonoBehaviour
     [Header("PostProcessProfiles")]
     [SerializeField] private PostProcessProfile runningProfile;
     [SerializeField] private PostProcessProfile annihilationProfile;
-
-    private AutoExposure autoExposure;
-    private ColorGrading colorGrading;
-    private Grain grain;
-    private LensDistortion lensDistortion;
-    private Vignette vignette; 
+    
+    private LensDistortion annihilationLensDistortion;
     
     public void TEST_StartLensDistortion()
     {
@@ -27,11 +23,7 @@ public class PostProcessHandler : MonoBehaviour
 
     private void Awake()
     {
-        postProcessVolume.profile.TryGetSettings(out autoExposure);
-        postProcessVolume.profile.TryGetSettings(out colorGrading);
-        postProcessVolume.profile.TryGetSettings(out grain);
-        postProcessVolume.profile.TryGetSettings(out lensDistortion);
-        postProcessVolume.profile.TryGetSettings(out vignette);
+        annihilationProfile.TryGetSettings(out annihilationLensDistortion);
     }
 
     private void OnEnable()
@@ -46,10 +38,15 @@ public class PostProcessHandler : MonoBehaviour
 
     private void Handle_OnAnnihilationRunning()
     {
-        ApplyAnnihilationPostProcessEffects();
+        ApplyAnnihilationProfile();
     }
     
-    private void ApplyAnnihilationPostProcessEffects()
+    private void ApplyRunningProfile()
+    {
+        postProcessVolume.profile = runningProfile;
+    }
+    
+    private void ApplyAnnihilationProfile()
     {
         postProcessVolume.profile = annihilationProfile;
         StartCoroutine(LensDistortion());
@@ -62,14 +59,9 @@ public class PostProcessHandler : MonoBehaviour
 
         while (elapsedTime <= maxCurveTime)
         {
-            lensDistortion.intensity.Override(lensDistortionCurve.Evaluate(elapsedTime));
+            annihilationLensDistortion.intensity.Override(lensDistortionCurve.Evaluate(elapsedTime));
             elapsedTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
-    }
-
-    private void ApplyRunningPostProcessEffects()
-    {
-        
     }
 }

@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d743fd4d-d12b-4ae7-95d1-d723d14e6dd3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PushTheStone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PostProcessHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PostProcessHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene_Profiles/SampleSceneLensDistortion.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/Scenes/SampleScene_Profiles/SampleSceneLensDistortion.asset.meta" beforeDir="false" />
-    </list>
+    <list default="true" id="d743fd4d-d12b-4ae7-95d1-d723d14e6dd3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,7 +146,7 @@
       <workItem from="1699536429973" duration="1867000" />
       <workItem from="1699557503650" duration="5604000" />
       <workItem from="1699744186837" duration="595000" />
-      <workItem from="1699816402984" duration="2926000" />
+      <workItem from="1699816402984" duration="3245000" />
     </task>
     <servers />
   </component>

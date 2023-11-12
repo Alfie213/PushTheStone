@@ -836,6 +836,7 @@ MonoBehaviour:
   - {fileID: 3160674696525839619, guid: 8622840f07273954185c1a1e5eb856e5, type: 3}
   annihilationModeChunksPrefabs:
   - {fileID: 8699385848629454793, guid: 9c81bbea7c832ce4d8d016b3bdb638fc, type: 3}
+  - {fileID: 3747489689115538482, guid: 352c2b4ca134bed43aef77c352dee5fb, type: 3}
   chunkSpawnParent: {fileID: 1996847987}
 --- !u!114 &154289253
 MonoBehaviour:

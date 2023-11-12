@@ -22,8 +22,8 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-tr
-  - m_GUID: c37f1300e5d29e84b8c6e4d1a9dfc883
-    m_Address: MainMenuBackgroundSignRu
+  - m_GUID: bda3026b98fb990449391a5189966d6c
+    m_Address: MainMenuBackgroundSignTr
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-tr

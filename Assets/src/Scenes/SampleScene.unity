@@ -827,10 +827,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d51574ba654946246b7a0292a0b33bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunksPrefabs:
-  - {fileID: 1870563923490595530, guid: a6f49fc7890ba8943ba2a960e4a3127c, type: 3}
-  - {fileID: 9140178568203413991, guid: 4b3f40dfd99d88343b8f9cbfd62e3364, type: 3}
   maxSimultaneousChunks: 2
+  runningModeChunksPrefabs:
+  - {fileID: 5530471959537344198, guid: f6d01ac319a8f9547a52ac79e0f87e7a, type: 3}
+  - {fileID: 7848091611194563841, guid: c696b634db0963b4095f4122f7fd3f7b, type: 3}
+  - {fileID: 1436461528922404045, guid: 8468cf7593877784fa7200971f696f49, type: 3}
+  - {fileID: 6977474237716004900, guid: 23175db77af611348925408a4ef37ed2, type: 3}
+  - {fileID: 3160674696525839619, guid: 8622840f07273954185c1a1e5eb856e5, type: 3}
+  annihilationModeChunksPrefabs:
+  - {fileID: 8699385848629454793, guid: 9c81bbea7c832ce4d8d016b3bdb638fc, type: 3}
   chunkSpawnParent: {fileID: 1996847987}
 --- !u!114 &154289253
 MonoBehaviour:

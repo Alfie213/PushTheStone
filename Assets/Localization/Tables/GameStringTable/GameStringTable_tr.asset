@@ -17,7 +17,11 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: db4b0673561c43a4797be976a509fffe, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 613611442176
+    m_Localized: "Oynamak \u0130\xE7in Dokunun"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: GameStringTable Shared Data
   m_EditorClassIdentifier: 
   m_TableCollectionName: GameStringTable
-  m_TableCollectionNameGuidString: 00000000000000000000000000000000
-  m_Entries: []
+  m_TableCollectionNameGuidString: db4b0673561c43a4797be976a509fffe
+  m_Entries:
+  - m_Id: 613611442176
+    m_Key: GameScene/Canvas/GameUI/StateScreens/PauseScreen/PauseTapToPlayText
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

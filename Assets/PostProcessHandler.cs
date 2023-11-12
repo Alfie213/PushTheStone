@@ -9,8 +9,12 @@ public class PostProcessHandler : MonoBehaviour
 
     [Header("LensDistortion")]
     [SerializeField] private AnimationCurve lensDistortionCurve;
-    
-    private LensDistortion lensDistortion; 
+
+    private AutoExposure autoExposure;
+    private ColorGrading colorGrading;
+    private Grain grain;
+    private LensDistortion lensDistortion;
+    private Vignette vignette; 
     
     public void TEST_StartLensDistortion()
     {
@@ -19,7 +23,11 @@ public class PostProcessHandler : MonoBehaviour
 
     private void Awake()
     {
+        postProcessVolume.profile.TryGetSettings(out autoExposure);
+        postProcessVolume.profile.TryGetSettings(out colorGrading);
+        postProcessVolume.profile.TryGetSettings(out grain);
         postProcessVolume.profile.TryGetSettings(out lensDistortion);
+        postProcessVolume.profile.TryGetSettings(out vignette);
     }
 
     private void OnEnable()
@@ -33,6 +41,11 @@ public class PostProcessHandler : MonoBehaviour
     }
 
     private void Handle_OnAnnihilationRunning()
+    {
+        ApplyAnnihilationPostProcessEffects();
+    }
+    
+    private void ApplyAnnihilationPostProcessEffects()
     {
         StartCoroutine(LensDistortion());
     }
@@ -48,5 +61,10 @@ public class PostProcessHandler : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
+    }
+
+    private void ApplyRunningPostProcessEffects()
+    {
+        
     }
 }

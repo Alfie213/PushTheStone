@@ -765,7 +765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce2103040c084c04493bfea4a440d03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: SampleScene
+  gameSceneName: GameScene
   mainMenuSceneName: MainMenuScene
   loadingScreen: {fileID: 1347873877}
   loadingSlider: {fileID: 593688467}

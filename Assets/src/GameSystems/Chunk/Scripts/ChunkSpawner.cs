@@ -4,8 +4,11 @@ using Random = UnityEngine.Random;
 
 public class ChunkSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject[] chunksPrefabs;
     [SerializeField] private int maxSimultaneousChunks;
+    
+    [Header("ChunksPrefabs")]
+    [SerializeField] private GameObject[] runningModeChunksPrefabs;
+    [SerializeField] private GameObject[] annihilationModeChunksPrefabs;
 
     [Header("SpawnParent")] [SerializeField]
     private Transform chunkSpawnParent;
@@ -100,13 +103,13 @@ public class ChunkSpawner : MonoBehaviour
     
     private void InstantiateRandomChunkNoRepetitions()
     {
-        int newChunkIndex = Random.Range(0, chunksPrefabs.Length);
-        while (chunksPrefabs.Length > 1 && newChunkIndex == lastInstantiatedChunkIndex)
+        int newChunkIndex = Random.Range(0, runningModeChunksPrefabs.Length);
+        while (runningModeChunksPrefabs.Length > 1 && newChunkIndex == lastInstantiatedChunkIndex)
         {
-            newChunkIndex = Random.Range(0, chunksPrefabs.Length);
+            newChunkIndex = Random.Range(0, runningModeChunksPrefabs.Length);
         }
 
-        lastInstantiatedChunk = Instantiate(chunksPrefabs[newChunkIndex],
+        lastInstantiatedChunk = Instantiate(runningModeChunksPrefabs[newChunkIndex],
             lastInstantiatedChunkTransform.position + new Vector3(0f, cam.orthographicSize * 2, 0f),
             Quaternion.identity,
             chunkSpawnParent);
@@ -134,7 +137,7 @@ public class ChunkSpawner : MonoBehaviour
 
     private void InstantiateRandomChunk()
     {
-        lastInstantiatedChunk = Instantiate(chunksPrefabs[Random.Range(0, chunksPrefabs.Length)],
+        lastInstantiatedChunk = Instantiate(runningModeChunksPrefabs[Random.Range(0, runningModeChunksPrefabs.Length)],
             lastInstantiatedChunkTransform.position + new Vector3(0f, cam.orthographicSize * 2, 0f),
             Quaternion.identity,
             chunkSpawnParent);

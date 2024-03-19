@@ -6,7 +6,6 @@ public static class EnvironmentEventBus
     // public static readonly CustomAction OnMouseDownScreen = new CustomAction();
     public static readonly CustomAction OnMouseExitScreen = new CustomAction();
 
-    public static readonly CustomAction OnUnpause = new CustomAction();
 
     public static readonly CustomAction<GameObject> OnChunkInstantiate = new CustomAction<GameObject>();
     public static readonly CustomAction OnChunkDestroy = new CustomAction();
@@ -20,6 +19,7 @@ public static class EnvironmentEventBus
     public static readonly CustomAction OnDefaultRunning = new CustomAction();
     public static readonly CustomAction OnAnnihilationRunning = new CustomAction();
     public static readonly CustomAction OnPause = new CustomAction();
+    public static readonly CustomAction OnUnpause = new CustomAction();
     public static readonly CustomAction OnGameOver = new CustomAction();
 
     public static readonly CustomAction OnGameSceneLoad = new CustomAction();
